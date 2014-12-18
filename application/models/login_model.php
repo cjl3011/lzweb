@@ -4,6 +4,15 @@ class Login_model extends CI_Model {
 	public function __construct(){
 		$this->load->database();
 	}
+	
+	public function get_by_uid($uid = 0){
+		$query = $this->db->get_where('user', array('uid'=> $uid));
+		
+		if($query){
+			return $query->row_array();
+		}
+				
+	}
 
 	public function get_by_name(){
 		$data = array(

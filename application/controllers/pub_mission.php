@@ -2,7 +2,6 @@
 class Pub_mission extends CI_Controller {
 
 	public function index(){
-		$this->load->library('session');
 		if ( ! file_exists(APPPATH.'/views/' . 'pub_mission' . '.php')){
 			show_404();
 		}

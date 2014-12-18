@@ -39,9 +39,6 @@
 */
 
 $route['default_controller'] = "";
-$route['pub_mission'] = "Pub_mission";
-$route['mission_list'] = "Mission_list";
-$route['register'] = "Register";
 $route['404_override'] = '';
 
 

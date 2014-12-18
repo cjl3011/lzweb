@@ -9,7 +9,7 @@ class Mission_list extends CI_Controller {
 
 	public function index()
 	{
-		$data['mission'] = $this->mission_model->get_by_id();
+		$data['mission'] = $this->mission_model->get();
 		$data['title'] = '任务列表';
 
 		$this->load->view('templates/header', $data);

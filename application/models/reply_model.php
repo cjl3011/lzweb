@@ -1,19 +1,19 @@
 <?php
-class Mission_model extends CI_Model {
+class Reply_model extends CI_Model {
 
 	public function __construct(){
 		$this->load->database();
 	}
 	
 	public function get(){
-		$query = $this->db->get('mission');
+		$query = $this->db->get('reply');
 		return $query->result_array();
 	}
 
 	public function get_by_mid($mid = 0){
 		if($mid){
-			$query = $this->db->get_where('mission', array('mid'=> $mid));
-			return $query->row_array();
+			$query = $this->db->get_where('reply', array('mid'=> $mid));
+			return $query->result_array();
 		} else {
 			return NULL;
 		}

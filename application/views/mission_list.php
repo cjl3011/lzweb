@@ -1,8 +1,5 @@
 <?php foreach ($mission as $mission_item): ?>
 
-    <h2><?php echo $mission_item['title'] ?></h2>
-    <div>
-        <?php echo $mission_item['content'] ?>
-    </div>
+    <h2><a href="http://localhost/lzweb/index.php/mission_reply/index/<?php echo $mission_item['mid']?>"><?php echo $mission_item['title']?></a></h2>
     
 <?php endforeach ?>
