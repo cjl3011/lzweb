@@ -1,18 +1,18 @@
 <?php
-class Mission_model extends CI_Model {
+class Theme_model extends CI_Model {
 
 	public function __construct(){
 		$this->load->database();
 	}
 	
 	public function get(){
-		$query = $this->db->get('mission');
+		$query = $this->db->get('theme');
 		return $query->result_array();
 	}
 
-	public function get_by_mid($mid = 0){
+	public function get_by_tid($tid = 0){
 		if($mid){
-			$query = $this->db->get_where('mission', array('mid'=> $mid));
+			$query = $this->db->get_where('theme', array('tid'=> $tid));
 			return $query->row_array();
 		} else {
 			return NULL;
@@ -21,7 +21,7 @@ class Mission_model extends CI_Model {
 	
 	public function get_by_name($name = 0){
 		if($name){
-			$query = $this->db->get_where('mission', array('name'=> $name));
+			$query = $this->db->get_where('theme', array('name'=> $name));
 			return $query->row_array();
 		} else {
 			return NULL;

@@ -21,6 +21,10 @@ body {
 <?php echo form_open('pub_mission') ?>
 <table width="830" border="1" cellpadding="5" cellspacing="0" bgcolor="#CCCCCC">
 	<tr>
+		<td>主题：</td>
+		<td><input name="theme" type="text"/></td>
+	</tr>
+	<tr>
 		<td>标题：</td>
 		<td><input name="title" type="text"/></td>
 	</tr>

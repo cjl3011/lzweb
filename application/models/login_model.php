@@ -35,6 +35,26 @@ class Login_model extends CI_Model {
 			return '用户名不存在';
 		}
 	}
+	
+	public function	get_user_info($username){
+		$query = $this->db->get_where('user', array('username'=> $username));
+		$result = $query->row_array();
+		return $result;
+	}
+		
+	public function set_cookie(){
+			$user = $this->login_model->get_user_info($this->input->post('username'));
+			$this->load->library('session');
+			//我的config中的$config['encryption_key'] = '07760bd492ea3974d8cab8dc6e969186';
+			
+			$newdata = array(
+                   'uid'  => $user['uid'],
+				   'nickname' => $user['nickname'],
+               );
+			$this->session->set_userdata($newdata);
+			echo $id;
+				
+	}
 }
-/* End of file mission_model.php */
-/* Location: ./application/controllers/mission_model.php */
+/* End of file login_model.php */
+/* Location: ./application/controllers/login_model.php */

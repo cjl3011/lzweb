@@ -1,4 +1,5 @@
 <?php
+header("Content-Type: text/html;charset=utf-8");
 class Mission_list extends CI_Controller {
 
 	public function __construct()
