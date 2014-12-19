@@ -5,6 +5,7 @@ class Login extends CI_Controller {
 	public function __construct(){
 		parent::__construct();
 		$this->load->model('login_model');
+		$this->load->helper('url');
 	}
 	
 	public function index(){
@@ -23,7 +24,7 @@ class Login extends CI_Controller {
 		} else {
 			if($this->login_model->get_by_name() === TRUE){
 				$this->login_model->set_cookie();
-				$this->load->view('pub_mission');
+				redirect('http://localhost/lzweb/index.php/mission_list');
 			} else if ($this->login_model->get_by_name() === FALSE){
 				$data['info'] = '用户名或密码不正确，请重新输入';
 				$this->load->view('templates/header', $data);

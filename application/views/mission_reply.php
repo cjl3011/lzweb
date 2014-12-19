@@ -16,5 +16,6 @@
 
 <?php echo form_open('mission_reply/reply?mid=' . $mission['mid'] . '&uid=' . $mission['uid']) ?>
 	<textarea name="content"></textarea>
+	<?php echo form_checkbox('hidden', 'TRUE', FALSE);?>匿名回复
 	<input name="submit" type="submit" value="提交">
 </form>

@@ -28,5 +28,5 @@ class Theme_model extends CI_Model {
 		}
 	}
 }
-/* End of file mission_model.php */
-/* Location: ./application/controllers/mission_model.php */
+/* End of file theme_model.php */
+/* Location: ./application/models/theme_model.php */

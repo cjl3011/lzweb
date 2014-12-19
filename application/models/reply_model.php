@@ -3,6 +3,7 @@ class Reply_model extends CI_Model {
 
 	public function __construct(){
 		$this->load->database();
+		$this->load->library('session');
 	}
 	
 	public function get(){
@@ -17,6 +18,18 @@ class Reply_model extends CI_Model {
 		} else {
 			return NULL;
 		}
+	}
+	
+	public function set_reply(){
+		$data = array(
+			'mid' => $this->input->get('mid'),
+			'content' => $this->input->post('content'),
+			'hidden' => $this->input->post('hidden')? 1 : 0,
+			'uid' => $this->session->userdata('uid'),
+			'nickname' => $this->session->userdata('nickname')
+		);
+		
+		return $this->db->insert('reply', $data);
 	}
 }
 /* End of file mission_model.php */

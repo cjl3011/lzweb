@@ -52,9 +52,8 @@ class Login_model extends CI_Model {
 				   'nickname' => $user['nickname'],
                );
 			$this->session->set_userdata($newdata);
-			echo $id;
-				
 	}
 }
+
 /* End of file login_model.php */
 /* Location: ./application/controllers/login_model.php */

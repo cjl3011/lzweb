@@ -29,9 +29,7 @@ class Mission_reply extends CI_Controller {
 	}
 	
 	public function reply(){
-		$mid = $this->input->get('mid');
-		echo $this->input->post('content');
-
+		echo $this->reply_model->set_reply();
 	}
 }
 /* End of file mission_list.php */
