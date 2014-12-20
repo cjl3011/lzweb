@@ -19,6 +19,15 @@ class Mission_model extends CI_Model {
 		}
 	}
 	
+	public function get_by_tid($tid = 0){
+		if($tid){
+			$query = $this->db->get_where('mission', array('tid'=> $tid));
+			return $query->result_array();
+		} else {
+			return NULL;
+		}
+	}
+	
 	public function get_by_name($name = 0){
 		if($name){
 			$query = $this->db->get_where('mission', array('name'=> $name));

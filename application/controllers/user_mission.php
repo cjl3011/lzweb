@@ -17,16 +17,13 @@ class User_mission extends CI_Controller {
 			'title' => '我的任务列表',
 			'uid' => $this->session->userdata('uid')
 			);
-			echo $data['uid'];
+			
 		$data['user_mission'] = $this->user_mission_model->get_user_mission($data['uid']);
-		
-		
+
 			$this->load->view('templates/header', $data);
 			$this->load->view('user_mission');
 			$this->load->view('templates/footer');
 		
-			
-			
 	}
 }
 		
