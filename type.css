@@ -1,0 +1,86 @@
+#dobody {
+	background-image: URL(picture1.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+#center {
+	width:1000px;
+	float:left;
+}
+#null {
+	width:100%;
+	height:160px;
+	text-align:center;
+}
+#zero {
+	width:1000px;
+	height:100px;
+	margin:auto;
+	padding-top:10px;
+}
+#topic {
+	width:1000px;
+	height:90px;
+	margin:auto;
+	padding-top:10px;
+	background-image:url(context.png);
+}
+
+#first {
+	width:1000px;
+	height:340px;
+	margin:auto;
+	padding-top:10px;
+}
+#login {
+	width: 480px;
+	height: 320px;
+	float: left;
+	background-image:url(context.png);
+	padding-top:20px;
+	padding-left:15px;
+}
+#context {
+	width:480px;
+	height:320px;
+	float:right;
+	background-image:url(context.png);
+	padding-top:20px;
+	padding-left:15px;
+}
+#text {
+	width:300px;
+	height:320px;
+	float:left;
+}
+#ima {
+	width:400px;
+	height:320px;
+	float:right;
+	padding-top:20px;
+}
+#second {
+	width:1000px;
+	height:400px;
+	margin:auto;
+	padding-top:10px;
+}
+#left {
+	width: 480px;
+	height: 320px;
+	float: left;
+	background-image:url(context.png);
+	padding-top:20px;
+	padding-left:15px;
+}
+#right {
+	width:480px;
+	height:320px;
+	float:right;
+	background-image:url(context.png);
+	padding-top:20px;
+	padding-left:15px;
+}
+
+
