@@ -12,13 +12,14 @@ class Pub_mission_model extends CI_Model {
 			'uid' => $uid,
 			'title' => $this->input->post('title'),
 			'content' => $this->input->post('content'),
+			'payment' => $this->input->post('payment'),
 		);
 		
 		$result = $this->theme_model->get_by_name($theme_name);
 		if($result){
 			$data['tid'] =$result['tid'];
 		} else {
-			$this->db->insert('theme', $data['theme']);
+			$this->db->insert('theme', array('name'=>$theme_name));
 			$result = $this->theme_model->get_by_name($theme_name);
 			$data['tid'] =$result['tid'];
 		}

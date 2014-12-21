@@ -19,7 +19,7 @@ class Theme_model extends CI_Model {
 		}
 	}
 	
-	public function get_by_name($name = 0){
+	public function get_by_name($name = NULL){
 		if($name){
 			$query = $this->db->get_where('theme', array('name'=> $name));
 			return $query->row_array();

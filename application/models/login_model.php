@@ -5,6 +5,11 @@ class Login_model extends CI_Model {
 		$this->load->database();
 	}
 	
+	public function get(){
+		$query = $this->db->where('type', 1)->get('user');
+		return $query->result_array();
+	}
+	
 	public function get_by_uid($uid = 0){
 		$query = $this->db->get_where('user', array('uid'=> $uid));
 		
@@ -41,6 +46,10 @@ class Login_model extends CI_Model {
 		$result = $query->row_array();
 		return $result;
 	}
+	
+	public function delete_by_uid($uid) {
+		return $this->db->where('uid', $uid)->delete('user');
+	}
 		
 	public function set_cookie(){
 			$user = $this->login_model->get_user_info($this->input->post('username'));
@@ -49,6 +58,7 @@ class Login_model extends CI_Model {
 			
 			$newdata = array(
                    'uid'  => $user['uid'],
+				   'type' => $user['type'],
 				   'nickname' => $user['nickname'],
                );
 			$this->session->set_userdata($newdata);

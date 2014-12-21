@@ -20,6 +20,7 @@ class Pub_mission extends CI_Controller {
 		
 		$data['title'] = '发布主题';
 
+		$this->form_validation->set_rules('theme', 'Theme', 'required');
 		$this->form_validation->set_rules('title', 'Title', 'required');
 		$this->form_validation->set_rules('content', 'Content', 'required');
 		

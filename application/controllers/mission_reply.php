@@ -14,12 +14,17 @@ class Mission_reply extends CI_Controller {
 		$this->load->helper('form');
 		$this->load->library('form_validation');
 		$this->form_validation->set_rules('content', 'Content', 'required');
-		
+		$replies = $this->reply_model->get_by_mid($mid);
+		foreach($replies as $key=>$reply) {
+			if($reply['hidden']) {
+				$replies[$key]['nickname'] = '匿名';
+			}
+		}
 		$data = array(
 			'title' => '任务详情',
 			'mid'	=> $mid,
 			'mission' => $this->mission_model->get_by_mid($mid),
-			'reply'	=> $this->reply_model->get_by_mid($mid),
+			'reply'	=> $replies,
 		);
 		$data['pub_user'] = $this->login_model->get_by_uid($data['mission']['uid']);
 		

@@ -13,7 +13,7 @@ class Reply_model extends CI_Model {
 
 	public function get_by_mid($mid = 0){
 		if($mid){
-			$query = $this->db->get_where('reply', array('mid'=> $mid));
+			$query = $this->db->where('mid', $mid)->get('reply');
 			return $query->result_array();
 		} else {
 			return NULL;
