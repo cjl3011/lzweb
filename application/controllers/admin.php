@@ -8,6 +8,7 @@ class Admin extends CI_Controller {
 		$this->load->model('login_model');
 		$this->load->model('theme_model');
 		$this->load->library('session');
+		$this->load->library('pagination');
 	}
 	
 	public function index(){
@@ -30,12 +31,12 @@ class Admin extends CI_Controller {
 		}
 	}
 	
-	public function mission($tid=NULL) {
+	public function mission($tid=NULL, $page=NULL) {
 		if($tid) {
 			$data = array(
 			'title' => '管理员',
 			'mission' => $this->mission_model->get_by_tid($tid),
-		);
+			);
 		
 			$this->load->view('templates/header', $data);
 			$this->load->view('admin', $data);

@@ -8,8 +8,17 @@ class Mission_list extends CI_Controller {
 		$this->load->model('mission_model');
 	}
 
-	public function index()
+	public function index($page=NULL)
 	{
+		$num = 2;
+		$total = $this->mission_model->count_result();
+		$pagenum = ceil($total/$num);
+		If($page>$pagenum || $page === 0){
+			echo "Error : Can Not Found The page .";
+			exit;
+		}
+		$offset=($page-1)*$num; 
+		$info = $this->mission_model->get_page_info($num, $offset);
 		$data['mission'] = $this->mission_model->get();
 		$data['title'] = '任务列表';
 

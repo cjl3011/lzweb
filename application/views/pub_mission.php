@@ -33,6 +33,12 @@ body {
 		<td>
 		  <textarea name="content"></textarea>
 		</td>
+	</tr>
+	<tr>
+		<td >悬赏：</td>
+		<td>
+		  <textarea name="payment"></textarea>
+		</td>
 		<td>
 			<input name="submit" type="submit" value="提交">
 		</td>
