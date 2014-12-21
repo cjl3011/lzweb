@@ -33,7 +33,7 @@ class Login extends CI_Controller {
 			} else {
 				$data['info'] = '用户名不存在';
 				$this->load->view('templates/header', $data);
-				$this->load->view('login', $data);
+				$this->load->view('flow_count', $data);
 				$this->load->view('templates/footer');
 			}
 		}
