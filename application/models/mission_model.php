@@ -13,6 +13,11 @@ class Mission_model extends CI_Model {
 			return $query->result_array();
 		}
 	}
+
+		public function get_all(){
+		$query = $this->db->get('mission');
+		return $query->result_array();
+	}
 	
 	public function count_result(){
 		$query = $this->db->count_all_results('mission');
