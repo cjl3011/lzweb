@@ -7,7 +7,7 @@ class Mission_model extends CI_Model {
 	
 	public function get($num=NULL, $offset=0){
 		if($num && $offset){
-			return $this->db->get('mission', $num, $offset)
+			return $this->db->get('mission', $num, $offset);
 		} else {
 			$query = $this->db->get('mission');
 			return $query->result_array();
