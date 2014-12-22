@@ -1,0 +1,43 @@
+.nav{
+	width: 1044px;
+	margin: 10px auto;
+	overflow: hidden;
+}
+.nav-column{
+	width: 120px;
+	height: 90px;
+	float: left;
+	padding: 10px 14px 0 14px;
+}
+.nav-row{
+	overflow: hidden;
+}
+.nav-element{
+	display: block;
+	width: 40px;
+	height: 30px;
+	color: #00a1e9;
+	float: left;
+	text-align: center;
+}
+.seq{
+	width: 1px;
+	height: 80px;
+	margin: 15px 0;
+	background: #d0d0d0;
+	float: left;
+}
+#banner{
+	height: 100px;
+	width: 1000px;
+	margin: 10px auto;
+	background: #fff;
+	border: 1px solid #d0d0d0;
+}
+.main{
+	width: 1000px;
+	margin: 10px auto;
+}
+.main-header{
+	line-height: 50px;
+}

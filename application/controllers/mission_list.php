@@ -5,23 +5,20 @@ class Mission_list extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('mission_model');
+		$this->load->model(array('mission_model', 'login_model', 'reply_model'));
+		$this->load->helper('url');
 	}
 
 	public function index()
 	{
-		//$num = 2;
-		//$total = $this->mission_model->count_result();
-		//$pagenum = ceil($total/$num);
-		//If($page>$pagenum || $page === 0){
-		//	echo "Error : Can Not Found The page .";
-		//	exit;
-		//}
-		//$offset=($page-1)*$num; 
-		//$info = $this->mission_model->get($num, $offset);
-		//print_r($info);
-		$data['mission'] = $this->mission_model->get();
+		$missions = $this->mission_model->get();
+		foreach($missions as $key => $mission){
+			$nickname = $this->login_model->get_by_uid($mission['uid'])['nickname'];
+			$missions[$key]['nickname'] = $nickname;
+			$missions[$key]['reply_count'] = count($this->reply_model->get_by_mid($mission['mid']));
+		}
 		$data['title'] = '任务列表';
+		$data['mission'] = $missions;
 
 		$this->load->view('templates/header', $data);
 		$this->load->view('mission_list', $data);

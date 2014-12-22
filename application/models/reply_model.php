@@ -4,6 +4,7 @@ class Reply_model extends CI_Model {
 	public function __construct(){
 		$this->load->database();
 		$this->load->library('session');
+		$this->load->model('mission_model');
 	}
 	
 	public function get(){
@@ -29,6 +30,7 @@ class Reply_model extends CI_Model {
 			'nickname' => $this->session->userdata('nickname')
 		);
 		
+		$this->mission_model->set_last_reply_time($data['mid'], date("Y-m-d h:i:s"));
 		return $this->db->insert('reply', $data);
 	}
 }

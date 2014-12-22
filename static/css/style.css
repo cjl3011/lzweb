@@ -1,0 +1,47 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-size: 14px;
+	font-family: "微软雅黑";
+	line-height: 30px;
+	color: #333;
+	background: #f0f0f0;
+}
+a{
+	text-decoration: none;
+}
+h1{
+	font-weight: normal;
+	font-size: 20px;
+}
+h2{
+	font-weight: normal;
+	font-size: 18px;
+}
+h3{
+	font-weight: normal;
+	font-size: 16px;
+}
+.big-blue-button{
+    color: #fff;
+    border-radius: 4px;
+    padding: 17px 20px;
+    background: #00a1e9;
+    font-size: 16px;
+}
+.middle-blue-button{
+    color: #fff;
+    border-radius: 4px;
+    padding: 10px 15px;
+    background: #00a1e9;
+    font-size: 14px;
+}
+.small-blue-button{
+    color: #fff;
+    border-radius: 4px;
+    padding: 5px 10px;
+    background: #00a1e9;
+    font-size: 12px;
+}

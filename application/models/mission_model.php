@@ -14,7 +14,7 @@ class Mission_model extends CI_Model {
 		}
 	}
 
-		public function get_all(){
+	public function get_all(){
 		$query = $this->db->get('mission');
 		return $query->result_array();
 	}
@@ -48,6 +48,13 @@ class Mission_model extends CI_Model {
 			return $query->row_array();
 		} else {
 			return NULL;
+		}
+	}
+	
+	public function set_last_reply_time($mid=NULL, $last_time=NULL) {
+		if($mid && $last_time){
+			$this->db->where('mid', $mid);
+			return $this->db->update('mission', array('last_reply_time'=>$last_time));
 		}
 	}
 }

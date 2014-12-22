@@ -1,0 +1,31 @@
+.header{
+	width: 100%;
+	min-width: 1000px;
+	background: #fff;
+	border-bottom: 1px solid #d0d0d0;
+}
+.header-content{
+	width: 1000px;
+	height: 100px;
+	margin: 0 auto;
+}
+#logo{
+	display: block;
+	height: 100px;
+	line-height: 100px;
+	color: #00a1e9;
+	font-size: 40px;
+	float: left;
+}
+.login-btn{
+	display: block;
+	height: 40px;
+	width: 100px;
+	line-height: 40px;
+	margin-top: 30px;
+	float: right;
+	text-align: center;
+	background: #00a1e9;
+	color: #fff;
+	border-radius: 4px;
+}
