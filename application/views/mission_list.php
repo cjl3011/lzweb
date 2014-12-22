@@ -3,7 +3,7 @@
 		<div class="main-header">
 			<span class="sub-title">教育任务</span>
 			<div style="float: right">
-				<a class="middle-blue-button" href="javascript:void(0)">我要发布任务</a>
+				<a class="middle-blue-button" href="pub_mission">我要发布任务</a>
 			</div>
 		</div>
 		<div class="main-body">

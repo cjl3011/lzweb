@@ -1,19 +1,3 @@
-<style type="text/css">
-<!--
-.STYLE3 {
-	font-size: 14px;
-	color: #000000;
-}
-body {
-	background-color: #0099FF;
-}
-.STYLE5 {color: #FF00FF}
-
--->
-</style>
-</head>
-
-<body>
 <h1><span class="STYLE5">发布任务：</span></h1>
 	
 <p>&nbsp;</p>
