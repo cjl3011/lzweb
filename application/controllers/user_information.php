@@ -33,46 +33,7 @@ class User_information extends CI_Controller {
 			
 			
 	}
-	/*public function mission(){
-		$this->load->library('session');
-		if ( ! file_exists(APPPATH.'/views/' . 'pub_mission' . '.php')){
-			show_404();
-		}
-		$uid = $this->session->userdata('uid');
-		$data = array(
-			'title' => '个人中心',
-			'user_mission' =>  $this->user_information_model->get_user_mission($uid)
-			);
-			
-		//$data['user_mission'] = $this->user_information_model->get_user_mission($data['uid']);
-
-			$this->load->view('templates/header', $data);
-			$this->load->view('user_information',$data);
-			$this->load->view('templates/footer');
-		
-	}
-	public function reply(){
-		$this->load->library('session');
-		if ( ! file_exists(APPPATH.'/views/' . 'pub_mission' . '.php')){
-			show_404();
-		}
-		$data = array(
-			'title' => '个人中心',
-			'uid' => $this->session->userdata('uid')
-			);
-			echo $data['uid'];
-		$data['user_reply'] = $this->user_information_model->get_user_reply($data['uid']);
-		
-		
-			$this->load->view('templates/header', $data);
-			$this->load->view('user_information',$data);
-			$this->load->view('templates/footer');
-		
-			
-			
-	}*/
 	
-		
 
 	
 	
