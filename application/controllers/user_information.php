@@ -33,10 +33,36 @@ class User_information extends CI_Controller {
 			
 			
 	}
+	public function delete_mission() {
+		$uid = $this->session->userdata('uid');
+		$user_mission =  $this->user_information_model->get_user_mission($uid);
+		foreach($user_mission as $user):
+		if($user['mid']!=NULL){
+			$this->user_information_model->delete_mission($user['mid']);
+			echo "delete successful";
+		}
+		else
+			echo "no mission";
+		endforeach;
+	}
+	public function delete_reply() {
+		$uid = $this->session->userdata('uid');
+		$user_reply = $this->user_information_model->get_user_reply($uid);
+		foreach($user_reply as $reply):
+		if($reply['mid']!=NULL){
+			$this->user_information_model->delete_reply($reply['mid']);
+			echo "delete successful";
+		}
+		else
+			echo "no reply";
+		endforeach;
+		}
+	
+	}
 	
 
 	
 	
-}
+
 /* End of file pub_mission.php */
 /* Location: ./application/controllers/pub_mission.php */
