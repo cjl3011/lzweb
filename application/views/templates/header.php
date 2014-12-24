@@ -8,12 +8,17 @@
     <link type="text/css" href="http://localhost/lzweb/static/css/layout/header.css" rel="stylesheet">
     <link type="text/css" href="http://localhost/lzweb/static/css/layout/main.css" rel="stylesheet">
     <link type="text/css" href="http://localhost/lzweb/static/css/mission/mission.css" rel="stylesheet">
+	<title><?php echo $title;?></title>
 </head>
 <body>
 	<div class="header">
 		<div class="header-content">
 			<a id="logo" href="index.php">LzWeb</a>
-			<a class="login-btn">登录/注册</a>
+			<?php if(isset($this->session->userdata['uid'])):?>
+				<a class="login-btn">欢迎您，<?php echo $this->session->userdata['nickname'];?></a>
+			<?php else:?>
+			<a href="http://localhost/lzweb/index.php/login" class="login-btn">登录/注册</a>
+			<?php endif;?>
 		</div>
 	</div>
 	<div class="nav">

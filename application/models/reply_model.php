@@ -21,17 +21,35 @@ class Reply_model extends CI_Model {
 		}
 	}
 	
-	public function set_reply(){
+	public function get_by_rid($rid = 0){
+		if($rid){
+			$query = $this->db->where('rid', $rid)->get('reply');
+			return $query->row_array();
+		} else {
+			return NULL;
+		}
+	}
+	
+	public function set_goodcount($rid) {
 		$data = array(
-			'mid' => $this->input->get('mid'),
-			'content' => $this->input->post('content'),
-			'hidden' => $this->input->post('hidden')? 1 : 0,
-			'uid' => $this->session->userdata('uid'),
-			'nickname' => $this->session->userdata('nickname')
+			'goodcount' => $this->get_by_rid($rid)['goodcount']+1,
 		);
-		
-		$this->mission_model->set_last_reply_time($data['mid'], date("Y-m-d h:i:s"));
-		return $this->db->insert('reply', $data);
+		return $this->db->update('reply', $data, array('rid' => $rid));
+	}
+	
+	public function set_reply(){
+		$uid = $this->session->userdata('uid');
+		if($uid){
+			$data = array(
+				'mid' => $this->input->post('mid'),
+				'content' => $this->input->post('content'),
+				'hidden' => $this->input->post('hidden') === 'false' ? 0 : 1,
+				'uid' => $uid,
+				'nickname' => $this->session->userdata('nickname')
+			);
+			$this->mission_model->set_last_reply_time($data['mid'], date("Y-m-d h:i:s"));
+			return $this->db->insert('reply', $data);
+		}
 	}
 }
 /* End of file mission_model.php */

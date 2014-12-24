@@ -14,6 +14,7 @@
 <script type="text/javascript">
     $(document).ready(function(){
 		Login.init();
+		Register.init();
 		$("#register-tab").click(function(){
 			$("#login-body").css({"display": "none"});
 			$("#register-body").css({"display": "block"});
@@ -25,7 +26,7 @@
 			$("#flag").animate({"left": "150px"}, 500);
 		});
     });
-    </script>
+</script>
 </head>
 <body>
 	<div class="header">
@@ -53,12 +54,12 @@
 			</div>
 			<div id="register-body">
 				<div class="main-body">
-					<input type="text" name="username" placeholder="Username"/>
-					<input type="password" name="password" placeholder="Password"/>
-					<input type="password" name="password" placeholder="Repeat Password"/>
+					<input type="text" id="register-username" placeholder="Username"/>
+					<input type="password" id="register-password" placeholder="Password"/>
+					<input type="password" id="register-confirm" placeholder="Confirm Password"/>
 				</div>
 				<div class="main-footer">
-					<a href="javascript:void(0)" class="middle-blue-button">注册</a>
+					<a href="javascript:void(0)" id="register-btn" class="middle-blue-button">注册</a>
 				</div>
 			</div>
 		</div>

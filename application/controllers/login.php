@@ -23,7 +23,6 @@ class Login extends CI_Controller {
 		} else if ($this->login_model->get_by_name() === FALSE){
 			echo json_encode(array('result' => FALSE));
 		}
-
 	}
 }
 /* End of file login.php */

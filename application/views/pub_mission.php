@@ -1,31 +1,40 @@
-<h1><span class="STYLE5">发布任务：</span></h1>
-	
-<p>&nbsp;</p>
-<?php echo validation_errors(); ?>
-<?php echo form_open('pub_mission') ?>
-<table width="830" border="1" cellpadding="5" cellspacing="0" bgcolor="#CCCCCC">
-	<tr>
-		<td>主题：</td>
-		<td><input name="theme" type="text"/></td>
-	</tr>
-	<tr>
-		<td>标题：</td>
-		<td><input name="title" type="text"/></td>
-	</tr>
-	<tr>
-		<td >描述：</td>
-		<td>
-		  <textarea name="content"></textarea>
-		</td>
-	</tr>
-	<tr>
-		<td >悬赏：</td>
-		<td>
-		  <textarea name="payment"></textarea>
-		</td>
-		<td>
-			<input name="submit" type="submit" value="提交">
-		</td>
-	</tr>
-</table>
-</form>
+<script type="text/javascript" src="http://localhost/lzweb/static/js/jquery.js"></script>
+<script type="text/javascript" src="http://localhost/lzweb/static/js/pub_mission.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+		Pub_mission.init();
+    });
+</script>
+<div id="banner"></div>
+<div class="main">
+	<h2 class="mission-banner">发布项目</h2>
+	<div class="mission-content">
+		<div class="row">
+			<div class="left-label">项目名称：</div>
+			<div class="right-input">
+				<input class="user-input" id="project-title"/>
+			</div>
+		</div>
+		<div class="row">
+			<div class="left-label">项目主题：</div>
+			<div class="right-input">
+				<input class="user-input" id="project-theme"/>
+			</div>
+		</div>
+		<div class="row">
+			<div class="left-label">悬赏金额：</div>
+			<div class="right-input">
+				<input class="user-input" id="project-payment"/>
+			</div>
+		</div>
+		<div class="row">
+			<div class="left-label">项目描述：</div>
+			<div class="right-input">
+				<div contenteditable="true" id="project-content" class="textarea"></div>
+			</div>
+		</div>
+		<div class="row" style="text-align: center">
+			<a href="javascript:void(0)" id="pub-btn" class="middle-blue-button">发布任务</a>
+		</div>
+	</div>
+</div>

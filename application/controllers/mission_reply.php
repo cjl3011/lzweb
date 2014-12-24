@@ -5,15 +5,11 @@ class Mission_reply extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('mission_model');
-		$this->load->model('reply_model');
-		$this->load->model('login_model');
+		$this->load->model(array('mission_model', 'reply_model', 'login_model'));
+		$this->load->helper('url');
 	}
 	
 	public function index($mid = 0){
-		$this->load->helper('form');
-		$this->load->library('form_validation');
-		$this->form_validation->set_rules('content', 'Content', 'required');
 		$replies = $this->reply_model->get_by_mid($mid);
 		foreach($replies as $key=>$reply) {
 			if($reply['hidden']) {
@@ -34,7 +30,19 @@ class Mission_reply extends CI_Controller {
 	}
 	
 	public function reply(){
-		echo $this->reply_model->set_reply();
+		if($this->reply_model->set_reply() === TRUE){
+			echo json_encode(array('result'=>TRUE));
+		}else{
+			echo json_encode(array('result'=>FALSE));
+		}
+	}
+	
+	public function add_goodcount(){
+		if($this->reply_model->set_goodcount($this->input->get('rid')) === TRUE){
+			redirect(base_url('mission_reply/index/' . $this->input->get('mid')));
+		}else{
+			echo json_encode(array('result'=>FALSE));
+		}
 	}
 }
 /* End of file mission_list.php */
