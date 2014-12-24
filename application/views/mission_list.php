@@ -1,3 +1,4 @@
+<script type="text/javascript" src="http://localhost/lzweb/static/js/page.js"></script>
 <div id="banner"></div>
 	<div class="main">
 		<div class="main-header">
@@ -10,8 +11,8 @@
 			<div class="sort-handler">
 				<a class="sort-element">默认排序</a>
 				<a class="sort-element">按时间排序</a>
-				<a class="sort-element">按悬赏金额排序</a>
 			</div>
+			<!--
 			<?php foreach ($mission as $mission_item):?>
 			<div class="mission">
 				<div class="mission-left">
@@ -24,10 +25,13 @@
 				</div>
 			</div>
 			<?php endforeach; ?>
-			
+			-->
+			<div id="mission_list"></div>
 			<div class="handler-area">
 				<a class="page-handler-element">上一页</a>
-				<a class="page-handler-element">1/10</a>
+				<a class="page-handler-element">
+					<span id="current">1</span>/<span id="total">10</span>
+				</a>
 				<a class="page-handler-element">下一页</a>
 			</div>
 		</div>

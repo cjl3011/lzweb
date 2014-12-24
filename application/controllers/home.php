@@ -32,6 +32,7 @@ class Home extends CI_Controller {
 	public function index()
 	{
 		$this->load->helper('html');
+		$data['titile'] = '首页';
 		$data['mission'] = $this->mission_model->get_all();
 		$data['theme'] = $this->theme_model->get();
 
