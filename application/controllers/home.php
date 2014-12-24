@@ -40,6 +40,7 @@ class Home extends CI_Controller {
 		$data['goodList'] = $this->array_sort($this->mission_model->get_all(),'goodcount');
 		$data['gradeList'] = $this->array_sort($this->mission_model->get_all(),'grade');
 
+		$this->load->view('templates/header',$data);
 		$this->load->view('home', $data);
 		$this->load->view('templates/footer');
 

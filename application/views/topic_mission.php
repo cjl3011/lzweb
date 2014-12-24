@@ -51,7 +51,8 @@
 		<div id="topic"> 
 
 		<?php foreach ($theme as $theme_item): ?>
-   			<a href="http://localhost/lzweb/index.php/mission_reply/index/1"><?php echo $theme_item['name']?></a>
+   			<a href="http://localhost/lzweb/index.php/topic_mission/index/<?php echo $theme_item['tid']?>"><?php echo $theme_item['name']?></a>
+
 		<?php endforeach ?>
 		</div>
 	</div>

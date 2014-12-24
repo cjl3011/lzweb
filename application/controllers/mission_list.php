@@ -5,16 +5,17 @@ class Mission_list extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model(array('mission_model', 'login_model', 'reply_model'));
+		$this->load->model(array('mission_model', 'login_model', 'reply_model','theme_model'));
 		$this->load->helper('url');
 	}
 
 	public function index()
 	{
 		$missions = $this->mission_model->get();
+		$data['theme'] = $this->theme_model->get();
 		foreach($missions as $key => $mission){
-			$nickname = $this->login_model->get_by_uid($mission['uid'])['nickname'];
-			$missions[$key]['nickname'] = $nickname;
+			$user = $this->login_model->get_by_uid($mission['uid']);
+			$missions[$key]['nickname'] = $user['nickname'];
 			$missions[$key]['reply_count'] = count($this->reply_model->get_by_mid($mission['mid']));
 		}
 		$data['title'] = '任务列表';

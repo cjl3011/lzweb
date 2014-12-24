@@ -19,9 +19,20 @@
 	padding: 20px 50px;
 	border-bottom: 1px dashed #d0d0d0;
 }
+.mission_sort{
+	font-size: 12px;
+	color: #8e8e8e;
+	height: 30px;
+	padding: 5px 20px;
+	border-bottom: 1px dashed #d0d0d0;
+}
 .mission-left{
 	float: left;
 	width: 500px;
+}
+.mission-left_sort{
+	float: left;
+	width: 150px;
 }
 .mission-right{
 	float: right;
