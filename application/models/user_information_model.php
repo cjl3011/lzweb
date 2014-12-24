@@ -15,6 +15,12 @@ class User_information_model extends CI_Model {
 			return $query->result_array();
 		
 		}
-}
+	public function delete_mission($mid=NULL) {
+			return $this->db->where('mid', $mid)->delete('mission');
+		}
+	public function delete_reply($mid=NULL) {
+			return $this->db->where('mid', $mid)->delete('reply');
+		} 
+	}
 /* End of file mission_model.php */
 /* Location: ./application/controllers/mission_model.php */
