@@ -10,24 +10,7 @@
     <link type="text/css" href="http://localhost/lzweb/static/css/mission/mission.css" rel="stylesheet">
     <link type="text/css" href="http://localhost/lzweb/static/css/type.css" rel="stylesheet">
 	<script type="text/javascript" src="http://www.codefans.net/ajaxjs/jquery-1.4.2.min.js"></script>
-	<script type="text/javascript"> 
-    $(document).ready(function(){
-		$('.nav-element_bink').each(function(){
-		var color1 = "#fe7519";
-		var color2 = "#7FFF00";
-		var color3 = "#FFD700";
-		if(color1 && color2){
-			var index = 0, colors = [color1, color2,color3], me = $(this);
-
-			setInterval(function(){
-				me.css({color:colors[index++]});
-				index = index > 2 ? 0 : index;
-			}, 200);
-			
-		}
-	});
-    });    
-</script>
+	<script type="text/javascript" src="http://localhost/lzweb/static/js/shine.js" rel="stylesheet"> </script>
 
 </head>
 <body>
@@ -41,7 +24,7 @@
 		<div class="nav-column">
 			<div class="nav-row">
 			<?php foreach ($theme as $theme_item): ?>
-   			<a class="nav-element_bink" href="http://localhost/lzweb/index.php/topic_mission/index/<?php echo $theme_item['tid']?>"><?php echo $theme_item['name']?></a>
+   			<a class="nav-element bink" href="http://localhost/lzweb/index.php/topic_mission/index/<?php echo $theme_item['tid']?>"><?php echo $theme_item['name']?></a>
 
 			<?php endforeach ?>
 			</div>

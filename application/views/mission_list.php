@@ -1,3 +1,9 @@
+<script type="text/javascript">
+    $(document).ready(function(){
+		Shine.init();
+
+    });
+</script>
 <div id="banner"></div>
 	<div class="main">
 		<div class="main-header">

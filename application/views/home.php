@@ -1,3 +1,10 @@
+<script type="text/javascript">
+    $(document).ready(function(){
+		Shine.init();
+
+    });
+    </script>
+
 <div id="banner"></div>
 <div id="first">
 <div id="login">
