@@ -37,7 +37,7 @@ class Apply_topic extends CI_Controller {
 		}
 	}
 
-	public function pg_get_result(){
+	public function get_result(){
 		if($this->apply_topic_model->set_apply()){
 			echo json_encode(array('result' => TRUE));
 		} else {

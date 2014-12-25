@@ -4,6 +4,7 @@
     $(document).ready(function(){
 		Pub_mission.init();
 		Shine.init();
+		alert("aa");
     });
 </script>
 <div id="banner"></div>

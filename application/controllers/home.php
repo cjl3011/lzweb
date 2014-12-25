@@ -10,7 +10,7 @@ class Home extends CI_Controller {
 		$this->load->model('mission_model');
 	}
 
-	public function array_sort($arr,$keys,$type='arsc')
+	public function array_sort($arr,$keys,$type='asc')
 	{ 
 		$keysvalue = $new_array = array();
 		foreach ($arr as $k=>$v){
@@ -35,6 +35,13 @@ class Home extends CI_Controller {
 		$data['titile'] = '首页';
 		$data['mission'] = $this->mission_model->get_all();
 		$data['theme'] = $this->theme_model->get();
+
+		$sum = count($this->mission_model->get_all());
+		if($sum <= 5){
+			$data['max'] = $sum;
+		} else {
+			$data['max'] = 5;
+		}
 
 		$data['count'] = count($this->theme_model->get());
 

@@ -30,7 +30,7 @@ class Mission_list extends CI_Controller {
 		$this->load->view('mission_list', $data);
 		$this->load->view('templates/footer');
 	}
-<<<<<<< HEAD
+
 
 		public function array_sort($arr,$keys,$type='arsc')
 	{ 
@@ -50,7 +50,6 @@ class Mission_list extends CI_Controller {
 		}
 		return $new_array; 
 	} 
-=======
 	
 	public function get_page(){
 		$offset = $this->input->post('offset');
@@ -74,7 +73,6 @@ class Mission_list extends CI_Controller {
 			));
 		}
 	}
->>>>>>> 3586f381bb66ac68570e1f890a7aec7b10d40658
 }
 /* End of file mission_list.php */
 /* Location: ./application/controllers/mission_list.php */
