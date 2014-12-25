@@ -9,10 +9,12 @@ class Mission_list extends CI_Controller {
 		$this->load->helper('url');
 	}
 
-	public function index()
+	public function index($tid = 1)
 	{
-		$missions = $this->mission_model->get();
+		$missions = $this->mission_model->get_by_tid($tid);
 		$data['theme'] = $this->theme_model->get();
+		$temp = $this->theme_model->get_by_tid($tid);
+		$data['name'] = $temp['name'];
 		foreach($missions as $key => $mission){
 			$user = $this->login_model->get_by_uid($mission['uid']);
 			$missions[$key]['nickname'] = $user['nickname'];
@@ -21,10 +23,32 @@ class Mission_list extends CI_Controller {
 		$data['title'] = '任务列表';
 		$data['mission'] = $missions;
 
+		$data['payList'] = $this->array_sort($this->mission_model->get_by_tid($tid),'payment');
+		$data['pubList'] = $this->array_sort($this->mission_model->get_by_tid($tid),'pubtime');
+
 		$this->load->view('templates/header', $data);
 		$this->load->view('mission_list', $data);
 		$this->load->view('templates/footer');
 	}
+
+		public function array_sort($arr,$keys,$type='arsc')
+	{ 
+		$keysvalue = $new_array = array();
+		foreach ($arr as $k=>$v){
+			$keysvalue[$k] = $v[$keys];
+		}
+		if($type == 'arsc')
+		{
+		arsort($keysvalue);
+		}else{
+		asort($keysvalue);
+		}
+		reset($keysvalue);
+		foreach ($keysvalue as $k=>$v){
+			$new_array[$k] = $arr[$k];
+		}
+		return $new_array; 
+	} 
 }
 /* End of file mission_list.php */
 /* Location: ./application/controllers/mission_list.php */

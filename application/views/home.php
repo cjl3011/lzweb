@@ -3,7 +3,7 @@
 		Shine.init();
 
     });
-    </script>
+</script>
 
 <div id="banner"></div>
 <div id="first">

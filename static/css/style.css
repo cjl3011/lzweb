@@ -45,3 +45,11 @@ h3{
     background: #00a1e9;
     font-size: 12px;
 }
+#register-body{
+	display: none;
+}
+.row{
+	padding: 10px 0;
+	margin-bottom: 10px;
+	overflow: hidden;
+}

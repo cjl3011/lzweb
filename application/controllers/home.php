@@ -35,6 +35,8 @@ class Home extends CI_Controller {
 		$data['mission'] = $this->mission_model->get_all();
 		$data['theme'] = $this->theme_model->get();
 
+		$data['count'] = count($this->theme_model->get());
+
 		$data['payList'] = $this->array_sort($this->mission_model->get_all(),'payment');
 		$data['pubList'] = $this->array_sort($this->mission_model->get_all(),'pubtime');
 		$data['goodList'] = $this->array_sort($this->mission_model->get_all(),'goodcount');

@@ -5,16 +5,13 @@ class Mission_reply extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('mission_model');
-		$this->load->model('reply_model');
-		$this->load->model('login_model');
+		$this->load->model(array('mission_model', 'login_model', 'reply_model','theme_model'));
+		$this->load->helper('url');
 	}
 	
 	public function index($mid = 0){
-		$this->load->helper('form');
-		$this->load->library('form_validation');
-		$this->form_validation->set_rules('content', 'Content', 'required');
 		$replies = $this->reply_model->get_by_mid($mid);
+	
 		foreach($replies as $key=>$reply) {
 			if($reply['hidden']) {
 				$replies[$key]['nickname'] = '匿名';
@@ -27,6 +24,7 @@ class Mission_reply extends CI_Controller {
 			'reply'	=> $replies,
 		);
 		$data['pub_user'] = $this->login_model->get_by_uid($data['mission']['uid']);
+		$data['theme'] = $this->theme_model->get();
 		
 		$this->load->view('templates/header', $data);
 		$this->load->view('mission_reply', $data);
@@ -34,7 +32,19 @@ class Mission_reply extends CI_Controller {
 	}
 	
 	public function reply(){
-		echo $this->reply_model->set_reply();
+		if($this->reply_model->set_reply() === TRUE){
+			echo json_encode(array('result'=>TRUE));
+		}else{
+			echo json_encode(array('result'=>FALSE));
+		}
+	}
+	
+	public function add_goodcount(){
+		if($this->reply_model->set_goodcount($this->input->get('rid')) === TRUE){
+			redirect(base_url('mission_reply/index/' . $this->input->get('mid')));
+		}else{
+			echo json_encode(array('result'=>FALSE));
+		}
 	}
 }
 /* End of file mission_list.php */

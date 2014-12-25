@@ -6,38 +6,29 @@ class Pub_mission extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('pub_mission_model');
+		$this->load->model('theme_model');
 		$this->load->library('session');
+		$this->load->helper('url');
 	}
+	
 	public function index(){
 		$this->load->library('session');
+		$data['theme'] = $this->theme_model->get();
 		if ( ! file_exists(APPPATH.'/views/' . 'pub_mission' . '.php')){
 			show_404();
 		}
-		
-		$this->load->helper('form');
-		$this->load->library('form_validation');
-		
-		
-		$data['title'] = '发布主题';
-
-		$this->form_validation->set_rules('theme', 'Theme', 'required');
-		$this->form_validation->set_rules('title', 'Title', 'required');
-		$this->form_validation->set_rules('content', 'Content', 'required');
-		
-		if ($this->form_validation->run() === FALSE)
-		{
-			$this->load->view('templates/header', $data);
-			$this->load->view('pub_mission');
-			$this->load->view('templates/footer');
-		}
-		else
-		{
-			$uid = $this->session->userdata('uid');
-			if($this->pub_mission_model->set_mission($uid)){
-				echo 'write right';
-			} else {
-				echo 'write error';
-			}
+		$data['title'] = '发布任务';
+		$this->load->view('templates/header', $data);
+		$this->load->view('pub_mission');
+		$this->load->view('templates/footer');
+	}
+	
+	public function get_result(){
+		$uid = $this->session->userdata('uid');
+		if($this->pub_mission_model->set_mission($uid)){
+			echo json_encode(array('result' => TRUE));
+		} else {
+			echo json_encode(array('result' => FALSE));
 		}
 	}
 	

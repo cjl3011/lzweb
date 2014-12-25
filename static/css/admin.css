@@ -1,0 +1,50 @@
+.menu{
+	display: block;
+	text-align: center;
+	width: 180px;
+	line-height: 50px;
+	border-radius: 4px;
+	margin-bottom: 10px;
+}
+.normal{
+	color: #333;
+	background: #e0e0e0;
+}
+.active{
+	color: #fff;
+	background: #00a1e9;
+}
+.workspace h1{
+	padding: 0 10px;
+	line-height: 50px;
+	color: #fff;
+	background: #00a1e9;
+}
+.workspace-content{
+	border: 1px solid #00a1e9;
+}
+select{
+	width: 200px;
+	height: 30px;
+	border: 1px solid #d0d0d0;
+}
+.workspace-part{
+	padding: 10px;
+	border-top: 1px solid #00a1e9;
+}
+table{
+	width: 100%;
+	border: 1px solid #d0d0d0;
+	border-collapse: collapse;
+}
+th, td{
+	text-align: center;
+	border: 1px solid #d0d0d0;
+	line-height: 40px;
+}
+.td25{
+	width: 25%;
+}
+.td50{
+	width: 50%;
+}

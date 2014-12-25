@@ -6,17 +6,16 @@ class Register_model extends CI_Model {
 		$this->load->model('login_model');
 	}
 	
-	public function set_user($result = '') {
+	public function set_user() {
 		
 		$data = array(
 			'username' => $this->input->post('username'),
 			'password' => $this->input->post('password'),
-			'nickname' => $this->input->post('nickname')
 		);
 		
-		$query = $this->login_model->get_by_name();
+		$query = $this->db->get_where('user', array('username'=> $data['username']));
 		
-		if($query){
+		if($query->row_array()){
 			return 'EXIST';
 		}
 		
