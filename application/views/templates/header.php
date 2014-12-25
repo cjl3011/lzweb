@@ -26,7 +26,6 @@
 				}, 200);
 			}
 		});
-		Admin.init();
     });    
 </script>
 </head>
@@ -34,7 +33,7 @@
 	<div class="header">
 		<div class="header-content">
 			<a id="logo" href="index.php">LzWeb</a>
-			<?php if(isset($this->session->userdata['uid'])):?>
+			<?php if(isset($this->session->userdata)):?>
 				<a href="<?php echo base_url('user_information')?>" class="login-btn">欢迎您，<?php echo $this->session->userdata['nickname'];?></a>
 			<?php else:?>
 				<a href="http://localhost/lzweb/index.php/login" class="login-btn">登录/注册</a>

@@ -42,7 +42,7 @@ class Mission_list extends CI_Controller {
 				$missions[$key]['reply_count'] = count($this->reply_model->get_by_mid($mission['mid']));
 			}
 			echo json_encode(array(
-				'result' => $missions,
+				'missions' => $missions,
 				'offset' => $offset,
 				'page'   => $page,
 			));

@@ -7,6 +7,7 @@ class Mission_model extends CI_Model {
 	
 	public function get($offset=0, $num=0){
 		if($num){
+			$this->db->order_by("pubtime", "desc");
 			$query = $this->db->get('mission', $num, $offset);
 			return $query->result_array();
 		} else {
@@ -50,6 +51,14 @@ class Mission_model extends CI_Model {
 		} else {
 			return NULL;
 		}
+	}
+	
+	public function set_goodcount($mid) {
+		$goodcount = $this->get_by_mid($mid)['goodcount'];
+		$data = array(
+			'goodcount' => $goodcount+1,
+		);
+		return $this->db->update('mission', $data, array('mid' => $mid));
 	}
 	
 	public function set_last_reply_time($mid=NULL, $last_time=NULL) {

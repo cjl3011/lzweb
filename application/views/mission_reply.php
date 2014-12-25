@@ -20,7 +20,7 @@
 			<div class="comment">
 				<input type='hidden' id="mid" value="<?php echo $mission['mid']?>"/>
 				<span href="javascript:void(0)">回复(<?php echo count($reply);?>)</span>
-				<span href="javascript:void(0)">点赞(<?php echo $mission['goodcount']?>)</span>
+				<a href="<?php echo base_url('mission_reply/add_goodcount') . '/?mid=' . $mission['mid']?>">点赞(<?php echo $mission['goodcount']?>)</a>
 			</div>
 			<div id="reply-area">
 				<textarea id="area"></textarea>

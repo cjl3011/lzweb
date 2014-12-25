@@ -7,7 +7,9 @@ class Home extends CI_Controller {
 		parent::__construct();
 
 		$this->load->model('theme_model');
+		$this->load->library('session');
 		$this->load->model('mission_model');
+		$this->load->helper('url');
 	}
 
 	public function array_sort($arr,$keys,$type='arsc')

@@ -5,7 +5,8 @@ class Topic_mission extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->helper('html');
+		$this->load->helper(array('html','url'));
+		$this->load->library('session');
 		$this->load->model('theme_model');
 		$this->load->model('mission_model');
 	}

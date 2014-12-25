@@ -9,17 +9,12 @@ class Admin extends CI_Controller {
 		$this->load->helper(array('url'));
 	}
 	
-	public function index($tid = NULL){
+	public function index(){
 		if($this->session->userdata['type'] === '0'){
-			if($tid){
-				$missions = $this->mission_model->get_by_tid($tid);
-				$data['missions'] = $missions;
-			}
-			$data = array(
-				'title' => '管理员',
-				'theme' => $this->theme_model->get(),
-				'users' => $this->login_model->get(),
-			);
+			
+			$data['title'] = '管理员';
+			$data['theme'] = $this->theme_model->get();
+			$data['users'] = $this->login_model->get();
 			$this->load->view('templates/header', $data);
 			$this->load->view('admin', $data);
 			$this->load->view('templates/footer');
@@ -28,8 +23,27 @@ class Admin extends CI_Controller {
 	
 	public function delete($uid=NULL) {
 		if($this->session->userdata['type'] === '0' && $uid) {
-			echo $this->login_model->delete_by_uid($uid);
+			$this->login_model->delete_by_uid($uid);
+			$data['title'] = '管理员';
+			$data['theme'] = $this->theme_model->get();
+			$data['users'] = $this->login_model->get();
+			$this->load->view('templates/header', $data);
+			$this->load->view('admin', $data);
+			$this->load->view('templates/footer');
 		}
+	}
+	
+	public function mission($tid=0){
+		if($tid){
+			$missions = $this->mission_model->get_by_tid($tid);
+			$data['missions'] = $missions;
+			$data['theme'] = $this->theme_model->get();
+			$data['title'] = '管理员';
+			$this->load->view('templates/header', $data);
+			$this->load->view('admin', $data);
+			$this->load->view('templates/footer');
+		}
+		
 	}
 }
 /* End of file admin.php */

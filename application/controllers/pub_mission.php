@@ -16,6 +16,7 @@ class Pub_mission extends CI_Controller {
 			show_404();
 		}
 		$data['title'] = '发布任务';
+		$data['theme'] = $this->theme_model->get();
 		$this->load->view('templates/header', $data);
 		$this->load->view('pub_mission');
 		$this->load->view('templates/footer');

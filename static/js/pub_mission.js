@@ -12,7 +12,7 @@ var Pub_mission = {
 		if(Pub_mission.valid()){
 			$.ajax({
 				"type": "POST",
-				"url": "/lzweb/index.php/pub_mission/get_result",
+				"url": "pub_mission/get_result",
 				"data": "title="+Pub_mission.title+"&theme="+Pub_mission.theme+"&payment="+Pub_mission.payment+"&content="+encodeURIComponent(Pub_mission.content),
 				"dataType": "json",
 				"success": function(data){
