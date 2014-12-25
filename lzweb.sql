@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.1.14
+-- version 3.4.10.1
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: Dec 22, 2014 at 05:27 PM
--- Server version: 5.6.17
--- PHP Version: 5.5.12
+-- Host: localhost
+-- Generation Time: Dec 24, 2014 at 09:14 AM
+-- Server version: 5.5.20
+-- PHP Version: 5.3.10
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -19,8 +19,29 @@ SET time_zone = "+00:00";
 --
 -- Database: `lzweb`
 --
-CREATE DATABASE IF NOT EXISTS `lzweb` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
+CREATE DATABASE `lzweb` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
 USE `lzweb`;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `apply`
+--
+
+CREATE TABLE IF NOT EXISTS `apply` (
+  `aid` int(8) NOT NULL AUTO_INCREMENT,
+  `applyTopic` varchar(20) COLLATE utf8_bin NOT NULL,
+  UNIQUE KEY `aid` (`aid`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `apply`
+--
+
+INSERT INTO `apply` (`aid`, `applyTopic`) VALUES
+(1, '大学'),
+(2, '航天'),
+(3, '奥迪');
 
 -- --------------------------------------------------------
 
@@ -37,7 +58,7 @@ CREATE TABLE IF NOT EXISTS `mission` (
   `goodcount` int(11) NOT NULL DEFAULT '0',
   `grade` int(11) NOT NULL DEFAULT '0',
   `pubtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `last_reply_time` timestamp NOT NULL,
+  `last_reply_time` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `payment` bigint(20) NOT NULL DEFAULT '0',
   PRIMARY KEY (`mid`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=6 ;
@@ -101,6 +122,7 @@ CREATE TABLE IF NOT EXISTS `theme` (
 --
 
 INSERT INTO `theme` (`tid`, `name`, `upid`, `hot`) VALUES
+(1, '梦想', 0, 1),
 (7, '新闻', 0, 0),
 (8, '体育', 0, 0);
 

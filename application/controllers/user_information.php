@@ -4,12 +4,15 @@ class User_information extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
+		$this->load->helper('url');
 		$this->load->model('login_model');
 		$this->load->model('user_information_model');
 		$this->load->library('session');
 	}
 	public function index(){
-		$this->load->library('session');
+		
+		$this->load->helper('html');
+		
 		if ( ! file_exists(APPPATH.'/views/' . 'pub_mission' . '.php')){
 			show_404();
 		}
@@ -25,7 +28,7 @@ class User_information extends CI_Controller {
 	
 		
 			$this->load->view('templates/header', $data);
-			$this->load->view('user_information');
+			$this->load->view('user_information',$data);
 			$this->load->view('templates/footer');
 		
 		
@@ -33,32 +36,23 @@ class User_information extends CI_Controller {
 			
 			
 	}
-	public function delete_mission() {
-		$uid = $this->session->userdata('uid');
-		$user_mission =  $this->user_information_model->get_user_mission($uid);
-		foreach($user_mission as $user):
-		if($user['mid']!=NULL){
-			$this->user_information_model->delete_mission($user['mid']);
-			echo "delete successful";
-		}
-		else
-			echo "no mission";
-		endforeach;
+	public function delete_mission($mid=0) {
+			if($mid)
+				echo $this->user_information_model->delete_mission($mid);
+		
 	}
-	public function delete_reply() {
-		$uid = $this->session->userdata('uid');
-		$user_reply = $this->user_information_model->get_user_reply($uid);
-		foreach($user_reply as $reply):
-		if($reply['mid']!=NULL){
-			$this->user_information_model->delete_reply($reply['mid']);
-			echo "delete successful";
-		}
-		else
-			echo "no reply";
-		endforeach;
-		}
+	public function delete_reply($mid) {
+			if($mid)
+				echo $this->user_information_model->delete_reply($mid);
 	
 	}
+	public function change_password(){
+					
+				$uid = $this->session->userdata('uid');	
+				$this->user_information_model->set_password($uid);
+				echo json_encode(array('result' => TRUE));
+	}
+}
 	
 
 	

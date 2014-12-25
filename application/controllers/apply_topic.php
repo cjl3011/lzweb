@@ -6,6 +6,7 @@ class Apply_topic extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('apply_topic_model');
+		$this->load->model('theme_model');
 	}
 	public function index(){
 		if ( ! file_exists(APPPATH.'/views/' . 'pub_mission' . '.php')){
@@ -15,7 +16,7 @@ class Apply_topic extends CI_Controller {
 		$this->load->helper('form');
 		$this->load->library('form_validation');
 		
-		
+		$data['theme'] = $this->theme_model->get();
 		$data['title'] = '申请主题';
 
 		$this->form_validation->set_rules('theme', 'Theme', 'required');
@@ -33,6 +34,14 @@ class Apply_topic extends CI_Controller {
 			} else {
 				echo 'write error';
 			}
+		}
+	}
+
+	public function get_result(){
+		if($this->apply_topic_model->set_apply()){
+			echo json_encode(array('result' => TRUE));
+		} else {
+			echo json_encode(array('result' => FALSE));
 		}
 	}
 	

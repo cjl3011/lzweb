@@ -31,10 +31,9 @@ class Reply_model extends CI_Model {
 	}
 	
 	public function set_goodcount($rid) {
-		$goodcount = $this->get_by_rid($rid)['goodcount'];
-		$data = array(
-			'goodcount' => $goodcount+1,
-		);
+
+		$temp = $this->get_by_rid($rid);
+		$data['goodcount'] = $temp['goodcount'] + 1;
 		return $this->db->update('reply', $data, array('rid' => $rid));
 	}
 	

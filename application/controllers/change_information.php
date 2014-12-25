@@ -7,6 +7,7 @@ class Change_information extends CI_Controller {
 		parent::__construct();
 		$this->load->model('change_information_model');
 		$this->load->library('session');
+		$this->load->helper('url');
 	}
 	
 	public function index(){

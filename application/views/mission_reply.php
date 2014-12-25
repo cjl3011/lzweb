@@ -3,6 +3,7 @@
 <script type="text/javascript">
     $(document).ready(function(){
 		Reply.init();
+		Shine.init();
     });
 </script>
 <div id="banner"></div>

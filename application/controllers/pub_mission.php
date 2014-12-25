@@ -6,12 +6,14 @@ class Pub_mission extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('pub_mission_model');
+		$this->load->model('theme_model');
 		$this->load->library('session');
 		$this->load->helper('url');
 	}
 	
 	public function index(){
 		$this->load->library('session');
+		$data['theme'] = $this->theme_model->get();
 		if ( ! file_exists(APPPATH.'/views/' . 'pub_mission' . '.php')){
 			show_404();
 		}
