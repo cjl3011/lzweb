@@ -19,20 +19,9 @@
 	padding: 20px 50px;
 	border-bottom: 1px dashed #d0d0d0;
 }
-.mission_sort{
-	font-size: 12px;
-	color: #8e8e8e;
-	height: 30px;
-	padding: 5px 20px;
-	border-bottom: 1px dashed #d0d0d0;
-}
 .mission-left{
 	float: left;
 	width: 500px;
-}
-.mission-left_sort{
-	float: left;
-	width: 150px;
 }
 .mission-right{
 	float: right;
@@ -89,11 +78,6 @@
 .comment span{
 	margin-left: 50px;
 }
-#reply-area{
-	position: relative;
-	height: 180px;
-	display: block;
-}
 #area{
 	position: relative;
 	margin-top: 10px;
@@ -102,9 +86,7 @@
 	border: 1px solid #e0e0e0;
 }
 #reply-btn{
-	position: absolute;
-	right: 0;
-	bottom: 20px;
+	float: right;
 }
 .left-label{
 	width: 100px;
@@ -137,4 +119,35 @@
 	border-left: 5px solid #00a1e9;
 	padding: 0 10px;
 	margin: 10px 0;
+}
+#search{
+	width: 1000px;
+	margin: 10px auto;
+	height: 30px;
+}
+#search-input{
+	width: 300px;
+	height: 28px;
+	padding-left: 10px;
+	border: 1px solid #d0d0d0;
+	border-radius: 10px;
+	float: left;
+}
+#search-btn{
+	margin-left: 10px;
+	border-radius: 4px;
+	background: #00a1e9;
+	color: #fff;
+	padding: 5px 10px;
+}
+.footer{
+	width: 1000px;
+	margin: 40px auto;
+}
+.footer h3{
+	border-bottom: 1px solid #d0d0d0;
+}
+.footer a{
+	color: #00a1e9;
+	margin-right: 50px;
 }

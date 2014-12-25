@@ -1,21 +1,23 @@
+	<script type="text/javascript" src="http://localhost/lzweb/static/js/jquery.js"></script>
+	<script type="text/javascript" src="http://localhost/lzweb/static/js/apply.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+		Apply_topic.init();
+		Shine.init();
+    });
+</script>
 <div id="banner"></div>
-
-<div align="center">
-<h1><span class="STYLE5">申请主题：</span></h1>
-	
-<p>&nbsp;</p>
-<?php echo validation_errors(); ?>
-<?php echo form_open('apply_topic') ?>
-<table width="830" border="1" cellpadding="5" cellspacing="0" bgcolor="#CCCCCC">
-	<tr>
-		<td >主题：</td>
-		<td>
-		  <textarea name="theme"></textarea>
-		</td>
-		<td>
-			<input name="submit" type="submit" value="提交">
-		</td>
-	</tr>
-</table>
-</form>
+<div class="main">
+	<h2 class="mission-banner">申请主题</h2>
+	<div class="mission-content">
+		<div class="row">
+			<div class="left-label">项目名称：</div>
+			<div class="right-input">
+				<input class="user-input" id="topic-theme"/>
+			</div>
+		</div>
+		<div class="row" style="text-align: center">
+			<a href="javascript:void(0)" id="app-btn" class="middle-blue-button">提交申请</a>
+		</div>
+	</div>
 </div>

@@ -7,16 +7,23 @@ var Admin = {
 			Admin.tid = $("#select-item").val();
 			Admin.submit();
 		});
-		
 	},
 	submit: function(){
 		$.ajax({
-			"type": "GET",
-			"url": "admin/index/",
+			"type": "POST",
+			"url": "admin/get_result",
 			"data": "tid="+Admin.tid,
 			"dataType": "json",
 			"success": function(data){
+				if(data.result){
+					alert(data.result);
+				}
+				else{
+					alert("发布失败！");
+				}
 			}
 		});
 	}
+	
+	
 }

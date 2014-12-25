@@ -31,9 +31,8 @@ class Reply_model extends CI_Model {
 	}
 	
 	public function set_goodcount($rid) {
-		$data = array(
-			'goodcount' => $this->get_by_rid($rid)['goodcount']+1,
-		);
+		$temp = $this->get_by_rid($rid);
+		$data['goodcount'] = $temp['goodcount'] + 1;
 		return $this->db->update('reply', $data, array('rid' => $rid));
 	}
 	
@@ -47,6 +46,9 @@ class Reply_model extends CI_Model {
 				'uid' => $uid,
 				'nickname' => $this->session->userdata('nickname')
 			);
+			if(!$data['nickname']){
+				$data['nickname'] = '匿名';
+			}
 			$this->mission_model->set_last_reply_time($data['mid'], date("Y-m-d h:i:s"));
 			return $this->db->insert('reply', $data);
 		}

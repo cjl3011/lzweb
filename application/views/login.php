@@ -31,7 +31,7 @@
 <body>
 	<div class="header">
 		<div class="header-content">
-			<a id="logo" href="index.php">LzWeb</a>
+			<a id="logo" href="http://localhost/lzweb/index.php/home">LzWeb</a>
 			<a class="login-btn">登录/注册</a>
 		</div>
 	</div>

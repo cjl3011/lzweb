@@ -11,7 +11,7 @@ class Theme_model extends CI_Model {
 	}
 
 	public function get_by_tid($tid = 0){
-		if($mid){
+		if($tid){
 			$query = $this->db->get_where('theme', array('tid'=> $tid));
 			return $query->row_array();
 		} else {

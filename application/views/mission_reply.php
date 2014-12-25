@@ -3,24 +3,25 @@
 <script type="text/javascript">
     $(document).ready(function(){
 		Reply.init();
+		Shine.init();
     });
 </script>
 <div id="banner"></div>
 	<div class="main">
 		<div class="mission-content">
-			<h2>项目名称：<?php echo $mission['title']?></h2>
+			<h2>名称：<?php echo $mission['title']?></h2>
 			<div class="mission-header">
-				<span>发布者：<?php echo $pub_user['username']?></span><span>发布时间：<?php echo $mission['pubtime']?></span><br/>
+				<span>发布者：<?php echo $pub_user['nickname']?></span><span>发布时间：<?php echo $mission['pubtime']?></span><br/>
 				<span>项目赏金：<?php echo $mission['payment']?>赏金</span>
 			</div>
 			<div class="mission-desc">
-				项目描述：<br/>
+				描述：<br/>
 				<?php echo $mission['content'];?>
 			</div>
 			<div class="comment">
 				<input type='hidden' id="mid" value="<?php echo $mission['mid']?>"/>
 				<span href="javascript:void(0)">回复(<?php echo count($reply);?>)</span>
-				<span href="javascript:void(0)">点赞(<?php echo $mission['goodcount']?>)</span>
+				<a href="<?php echo base_url('mission_reply/add_goodcount') . '/?mid=' . $mission['mid']?>">点赞(<?php echo $mission['goodcount']?>)</a>
 			</div>
 			<div id="reply-area">
 				<textarea id="area"></textarea>

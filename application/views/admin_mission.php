@@ -6,8 +6,8 @@
 			<th>任务名称</th>
 			<th>操作</th>
 		</tr>
-		<?php if(isset($mission)):?>
-		<?php foreach ($mission as $mission_item): ?>
+		<?php if(isset($missions)):?>
+		<?php foreach ($missions as $mission_item): ?>
 		<tr>
 			<td class="td25"><?php echo $mission_item['mid']?></td>
 			<td class="td50"><?php echo $mission_item['title']?></td>
