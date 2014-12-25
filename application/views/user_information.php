@@ -12,11 +12,10 @@
 	<script type="text/javascript" src="../static/js/jquery.js"></script>
 	<script type="text/javascript" src="http://localhost/lzweb/static/js/jquery.js"></script>
 	<script type="text/javascript" src="http://localhost/lzweb/static/js/change.js"></script>
-	<script type="text/javascript" src="http://localhost/lzweb/static/js/login.js"></script>
+	<script type="text/javascript" src="http://localhost/lzweb/static/js/change2.js"></script>
     <script type="text/javascript">
     $(document).ready(function(){
-		User_information.init();
-		Nick_information.init();
+		
 		/*$("#register-tab").click(function(){
 			$("#login-body").css({"display": "none"});
 			$("#register-body").css({"display": "block"});
@@ -37,6 +36,8 @@
             console.log(target_body)
             $(target_body).css({"display": "block"});
         }
+		User_information.init();
+		Nick_information.init();
        
     });
     </script>
@@ -70,12 +71,12 @@
                 </div>
                 <div class="desc-list" id="modify-nick-area">
                     <span class="float-left">请再次输入</span>
-                    <input  type="text" id="change_confirmepassword" placeholder="再次输入" class="float-left user-input" />
+                    <input  type="password" id="change-confirmpassword" placeholder="再次输入" class="float-left user-input" />
                 </div>
             </div>
             <div class="desc-list">
-                <a href="javascript:void(0)" class="middle-blue-button" id="change-button1">修改昵称</a>
-                <a href="http://localhost/lzweb/index.php/user_information/change_password/" class="middle-blue-button" id="change-button1">修改密码</a>
+                <a href="javascript:void(0)" class="middle-blue-button" id="change-button2">修改昵称</a>
+                <a href="javascript:void(0)" class="middle-blue-button" id="change-button1">修改密码</a>
             </div>
         </div>
 		

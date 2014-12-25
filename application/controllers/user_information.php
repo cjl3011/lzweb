@@ -52,7 +52,16 @@ class User_information extends CI_Controller {
 				$this->user_information_model->set_password($uid);
 				echo json_encode(array('result' => TRUE));
 	}
-}
+	public function change_nickname($uid=0)
+	{
+			$uid = $this->session->userdata('uid');	
+				$this->user_information_model->set_nickname($uid);
+				echo json_encode(array('result' => TRUE));
+	}
+
+			
+			
+	}
 	
 
 	

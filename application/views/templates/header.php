@@ -11,24 +11,7 @@
 	<title><?php echo $title;?></title>
     <link type="text/css" href="http://localhost/lzweb/static/css/type.css" rel="stylesheet">
 	<script type="text/javascript" src="http://localhost/lzweb/static/js/jquery.js"></script>
-	<script type="text/javascript"> 
-    $(document).ready(function(){
-		$('.bink').each(function(){
-			var color1 = "#fe7519";
-			var color2 = "#7FFF00";
-			var color3 = "#FFD700";
-			if(color1 && color2){
-				var index = 0, colors = [color1, color2,color3], me = $(this);
-
-				setInterval(function(){
-					me.css({color:colors[index++]});
-					index = index > 2 ? 0 : index;
-				}, 200);
-			}
-		});
-		Admin.init();
-    });    
-</script>
+	
 </head>
 <body>
 	<div class="header">
@@ -37,11 +20,10 @@
 			<?php if(isset($this->session->userdata['uid'])):?>
 				<a href="<?php echo base_url('user_information')?>" class="login-btn">欢迎您，<?php echo $this->session->userdata['nickname'];?></a>
 			<?php else:?>
-<<<<<<< HEAD
+
 			<a href="<?php echo base_url('login')?>" class="login-btn">登录/注册</a>
-=======
-				<a href="http://localhost/lzweb/index.php/login" class="login-btn">登录/注册</a>
->>>>>>> 3586f381bb66ac68570e1f890a7aec7b10d40658
+
+
 			<?php endif;?>
 		</div>
 	</div>
@@ -49,11 +31,11 @@
 		<div class="nav-column">
 			<div class="nav-row">
 			<?php foreach ($theme as $theme_item): ?>
-<<<<<<< HEAD
+
    			<a class="nav-element_bink" href="<?php echo base_url('topic_mission/index/')?>"<?php echo $theme_item['tid']?>><?php echo $theme_item['name']?></a>
-=======
+
    			<a class="nav-element bink" href="http://localhost/lzweb/index.php/topic_mission/index/<?php echo $theme_item['tid']?>"><?php echo $theme_item['name']?></a>
->>>>>>> 3586f381bb66ac68570e1f890a7aec7b10d40658
+
 
 			<?php endforeach ?>
 			</div>
