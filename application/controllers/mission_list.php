@@ -15,6 +15,7 @@ class Mission_list extends CI_Controller {
 		$data['theme'] = $this->theme_model->get();
 		$temp = $this->theme_model->get_by_tid($tid);
 		$data['name'] = $temp['name'];
+		
 		foreach($missions as $key => $mission){
 			$user = $this->login_model->get_by_uid($mission['uid']);
 			$missions[$key]['nickname'] = $user['nickname'];

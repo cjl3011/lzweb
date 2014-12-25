@@ -4,7 +4,6 @@
     $(document).ready(function(){
 		Pub_mission.init();
 		Shine.init();
-		alert("aa");
     });
 </script>
 <div id="banner"></div>
@@ -18,7 +17,7 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="left-label">项目主题：</div>
+			<div class="left-label">所属分类：</div>
 			<div class="right-input">
 				<input class="user-input" id="project-theme"/>
 			</div>

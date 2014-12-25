@@ -1,11 +1,11 @@
-
+<script type="text/javascript" src="http://localhost/lzweb/static/js/page.js"></script>
 <script type="text/javascript">
     $(document).ready(function(){
 		Shine.init();
-
+		Page.init();
     });
 </script>
-<script type="text/javascript" src="http://localhost/lzweb/static/js/page.js"></script>
+
 <div id="banner"></div>
 	<div class="main">
 		<div class="main-header">

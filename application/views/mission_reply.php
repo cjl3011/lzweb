@@ -9,13 +9,13 @@
 <div id="banner"></div>
 	<div class="main">
 		<div class="mission-content">
-			<h2>项目名称：<?php echo $mission['title']?></h2>
+			<h2>名称：<?php echo $mission['title']?></h2>
 			<div class="mission-header">
-				<span>发布者：<?php echo $pub_user['username']?></span><span>发布时间：<?php echo $mission['pubtime']?></span><br/>
+				<span>发布者：<?php echo $pub_user['nickname']?></span><span>发布时间：<?php echo $mission['pubtime']?></span><br/>
 				<span>项目赏金：<?php echo $mission['payment']?>赏金</span>
 			</div>
 			<div class="mission-desc">
-				项目描述：<br/>
+				描述：<br/>
 				<?php echo $mission['content'];?>
 			</div>
 			<div class="comment">
