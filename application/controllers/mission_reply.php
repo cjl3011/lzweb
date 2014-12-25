@@ -44,6 +44,7 @@ class Mission_reply extends CI_Controller {
 	public function add_goodcount(){
 		$rid = $this->input->get('rid');
 		$mid = $this->input->get('mid');
+		
 		if($rid){
 			if($this->reply_model->set_goodcount($rid) === TRUE){
 				redirect(base_url('mission_reply/index/' . $mid));

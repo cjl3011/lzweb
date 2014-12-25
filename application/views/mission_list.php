@@ -6,7 +6,6 @@
     });
 </script>
 
-<div id="banner"></div>
 	<div class="main">
 		<div class="main-header">
 
@@ -31,55 +30,15 @@
 			
 			<div class="tab-content">
   				<div role="tabpanel" class="tab-pane active" id="home">
-  					<?php foreach ($mission as $mission_item):?>
-					<div class="mission">
-						<div class="mission-left">
-							<span class="mission-title"><a href="http://localhost/lzweb/index.php/mission_reply/index/<?php echo $mission_item['mid']?>"><?php echo $mission_item['title']?></a></span>
-							<br/>发布者:<?php echo $mission_item['nickname']?>
-						</div>
-						<div class="mission-right">
-							发布时间：<?php echo $mission_item['pubtime']?>
-							<br/>回复：<?php echo $mission_item['reply_count']?> &nbsp;点赞：<?php echo $mission_item['goodcount']?>
-						</div>
-					</div>
-					<?php endforeach; ?>
-
-					<div id="mission_list"></div>
+					<div id="mission-list"></div>
 					<div class="handler-area">
-						<a class="page-handler-element">上一页</a>
+						<a href="javascript:void(0)" id="pre-btn" class="page-handler-element">上一页</a>
 						<a class="page-handler-element">
 							<span id="current">1</span>/<span id="total">10</span>
 						</a>
-						<a class="page-handler-element">下一页</a>
+						<a href="javascript:void(0)" id="next-btn" class="page-handler-element">下一页</a>
 					</div>
-
   				</div>
-  				<div role="tabpanel" class="tab-pane" id="profile">
-  					
-  					<?php foreach ($mission as $mission_item):?>
-					<div class="mission">
-						<div class="mission-left">
-							<span class="mission-title"><a href="http://localhost/lzweb/index.php/mission_reply/index/<?php echo $mission_item['mid']?>"><?php echo $mission_item['title']?></a></span>
-							<br/>发布者:<?php echo $mission_item['nickname']?>
-						</div>
-						<div class="mission-right">
-							发布时间：<?php echo $mission_item['pubtime']?>
-							<br/>回复：<?php echo $mission_item['reply_count']?> &nbsp;点赞：<?php echo $mission_item['goodcount']?>
-						</div>
-					</div>
-					<?php endforeach; ?>
-
-					<div id="mission_list"></div>
-					<div class="handler-area">
-						<a class="page-handler-element">上一页</a>
-						<a class="page-handler-element">
-							<span id="current">1</span>/<span id="total">10</span>
-						</a>
-						<a class="page-handler-element">下一页</a>
-					</div>
-  					
-  				</div>
-			</div>
-
+				</div>
 		</div>
 	</div>

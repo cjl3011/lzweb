@@ -1,11 +1,8 @@
-$(document).ready(function(){
-	$("#pre-btn").bind("click", Page.pre_page);
-	$("#next-btn").bind("click", Page.next_page);
-	Page.init();
-});
 var Page = {
 	current_page: 0,
 	init: function(){
+		$("#pre-btn").bind("click", Page.pre_page);
+		$("#next-btn").bind("click", Page.next_page);
 		Page.next_page();
 	},
 	pre_page: function(){
@@ -21,7 +18,7 @@ var Page = {
 			"dataType": "json",
 			"success": function(data){
 				if(data.missions.length > 0){
-					Page.current_page = data.offset/2 + 1;
+					Page.current_page = parseInt(data.offset)/2 + 1;
 					Page.fill_page(data);
 				}
 			}
@@ -38,7 +35,7 @@ var Page = {
 			"dataType": "json",
 			"success": function(data){
 				if(data.missions.length > 0){
-					Page.current_page = data.offset/2 + 1;
+					Page.current_page = parseInt(data.offset)/2 + 1;
 					Page.fill_page(data);
 				}
 			}

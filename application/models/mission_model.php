@@ -61,6 +61,14 @@ class Mission_model extends CI_Model {
 		return $this->db->update('mission', $data, array('mid' => $mid));
 	}
 	
+	public function set_grade($mid) {
+		$grade = $this->get_by_mid($mid)['grade'];
+		$data = array(
+			'grade' => $grade,
+		);
+		return $this->db->update('mission', $data, array('mid' => $mid));
+	}
+	
 	public function set_last_reply_time($mid=NULL, $last_time=NULL) {
 		if($mid && $last_time){
 			$this->db->where('mid', $mid);

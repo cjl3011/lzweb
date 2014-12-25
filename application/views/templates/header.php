@@ -194,4 +194,13 @@
 			<a href="http://localhost/lzweb/index.php/apply_topic">申请更多项目</a>
 		</div>
 	</div>
-  
+  <div id="banner"></div>
+<div id="search">
+		<div class="float-left">
+			<input type="text" name="search-name" id="search-input"/>
+			<a href="#" id="search-btn">搜索</a>
+		</div>
+		<div class="float-right">
+			流量统计：20
+		</div>
+	</div>
