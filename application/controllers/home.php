@@ -8,6 +8,7 @@ class Home extends CI_Controller {
 
 		$this->load->model('theme_model');
 		$this->load->model('mission_model');
+		$this->load->helper('url');
 	}
 
 	public function array_sort($arr,$keys,$type='arsc')

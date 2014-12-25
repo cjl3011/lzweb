@@ -19,6 +19,9 @@ class Change_information_model extends CI_Model {
 			'password' => $password,
 			'nickname' => $nickname);
 			
+			
+			
+			$this->db->where('uid', $uid);
 			$this->db->update('user',$data);
 		return $query;
 		}
