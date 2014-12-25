@@ -5,9 +5,10 @@ class Mission_model extends CI_Model {
 		$this->load->database();
 	}
 	
-	public function get($num=NULL, $offset=0){
-		if($num && $offset){
-			return $this->db->get('mission', $num, $offset);
+	public function get($offset=0, $num=0){
+		if($num){
+			$query = $this->db->get('mission', $num, $offset);
+			return $query->result_array();
 		} else {
 			$query = $this->db->get('mission');
 			return $query->result_array();
