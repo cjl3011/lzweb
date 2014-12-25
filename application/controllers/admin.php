@@ -39,6 +39,7 @@ class Admin extends CI_Controller {
 			$data['missions'] = $missions;
 			$data['theme'] = $this->theme_model->get();
 			$data['title'] = '管理员';
+			$data['users'] = $this->login_model->get();
 			$this->load->view('templates/header', $data);
 			$this->load->view('admin', $data);
 			$this->load->view('templates/footer');

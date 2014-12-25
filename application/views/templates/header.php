@@ -34,19 +34,19 @@
 			<?php foreach ($theme as $theme_item): ?>
    			<a class="nav-element bink" href="http://localhost/lzweb/index.php/topic_mission/index/<?php echo $theme_item['tid']?>"><?php echo $theme_item['name']?></a>
 
-			<?php endfor; ?>
+			<?php endforeach; ?>
 			</div>
 			<div class="nav-row">
 
 			<?php foreach ($theme as $theme_item): ?>
    			<a class="nav-element" href="<?php echo base_url('topic_mission/index/')?>"<?php echo $theme_item['tid']?>><?php echo $theme_item['name']?></a>
-			<?php endfor; ?>
+			<?php endforeach; ?>
 			</div>
 			<div class="nav-row">
 			<?php foreach ($theme as $theme_item): ?>
    			<a class="nav-element" href="<?php echo base_url('topic_mission/index/')?>"<?php echo $theme_item['tid']?>><?php echo $theme_item['name']?></a>
 
-			<?php endfor; ?>
+			<?php endforeach; ?>
 			</div>
 		</div>
 		<div class="seq"></div>
@@ -54,19 +54,19 @@
 			<div class="nav-row">
 			<?php foreach ($theme as $theme_item): ?>
    			<a class="nav-element" href="<?php echo base_url('topic_mission/index/')?>"<?php echo $theme_item['tid']?>><?php echo $theme_item['name']?></a>
-			<?php endfor; ?>
+			<?php endforeach; ?>
 			</div>
 			<div class="nav-row">
 			<?php foreach ($theme as $theme_item): ?>
    			<a class="nav-element" href="<?php echo base_url('topic_mission/index/')?>"<?php echo $theme_item['tid']?>><?php echo $theme_item['name']?></a>
-			<?php endfor; ?>
+			<?php endforeach; ?>
 			</div>
 			<div class="nav-row">
 
 			<?php foreach ($theme as $theme_item): ?>
    			<a class="nav-element" href="<?php echo base_url('topic_mission/index/')?>"<?php echo $theme_item['tid']?>><?php echo $theme_item['name']?></a>
 
-			<?php endfor; ?>
+			<?php endforeach; ?>
 			</div>
 		</div>
 		<div class="seq"></div>
@@ -74,18 +74,18 @@
 			<div class="nav-row">
 			<?php foreach ($theme as $theme_item): ?>
    			<a class="nav-element" href="<?php echo base_url('topic_mission/index/')?>"<?php echo $theme_item['tid']?>><?php echo $theme_item['name']?></a>
-			<?php endfor; ?>
+			<?php endforeach; ?>
 			</div>
 			<div class="nav-row">
 			<?php foreach ($theme as $theme_item): ?>
    			<a class="nav-element" href="<?php echo base_url('topic_mission/index/')?>"<?php echo $theme_item['tid']?>><?php echo $theme_item['name']?></a>
-			<?php endfor; ?>
+			<?php endforeach; ?>
 			</div>
 			<div class="nav-row">
 			<?php foreach ($theme as $theme_item): ?>
    			<a class="nav-element" href="<?php echo base_url('topic_mission/index/')?>"<?php echo $theme_item['tid']?>><?php echo $theme_item['name']?></a>
 
-			<?php endfor; ?>
+			<?php endforeach; ?>
 			</div>
 		</div>
 		<div class="seq"></div>		
@@ -95,44 +95,20 @@
 			<?php foreach ($theme as $theme_item): ?>
    			<a class="nav-element" href="<?php echo base_url('topic_mission/index/')?>"<?php echo $theme_item['tid']?>><?php echo $theme_item['name']?></a>
 
-			<?php endfor; ?>
+			<?php endforeach; ?>
 			</div>
 			<div class="nav-row">
 			<?php foreach ($theme as $theme_item): ?>
    			<a class="nav-element" href="<?php echo base_url('topic_mission/index/')?>"<?php echo $theme_item['tid']?>><?php echo $theme_item['name']?></a>
 
-			<?php endfor; ?>
-			</div>
-			<div class="nav-row">
-
-			<?php foreach ($theme as $theme_item): ?>
-   			<a class="nav-element" href="<?php echo base_url('topic_mission/index/')?>"<?php echo $theme_item['tid']?>><?php echo $theme_item['name']?></a>
-
-			<?php endfor; ?>
-			</div>
-		</div>
-		<div class="seq"></div>
-		<div class="nav-column">
-			<div class="nav-row">
-
-			<?php foreach ($theme as $theme_item): ?>
-   			<a class="nav-element" href="<?php echo base_url('topic_mission/index/')?>"<?php echo $theme_item['tid']?>><?php echo $theme_item['name']?></a>
-
-			<?php endfor; ?>
+			<?php endforeach; ?>
 			</div>
 			<div class="nav-row">
 
 			<?php foreach ($theme as $theme_item): ?>
    			<a class="nav-element" href="<?php echo base_url('topic_mission/index/')?>"<?php echo $theme_item['tid']?>><?php echo $theme_item['name']?></a>
 
-			<?php endfor; ?>
-			</div>
-			<div class="nav-row">
-
-			<?php foreach ($theme as $theme_item): ?>
-   			<a class="nav-element" href="<?php echo base_url('topic_mission/index/')?>"<?php echo $theme_item['tid']?>><?php echo $theme_item['name']?></a>
-
-			<?php endfor; ?>
+			<?php endforeach; ?>
 			</div>
 		</div>
 		<div class="seq"></div>
@@ -142,21 +118,21 @@
 			<?php foreach ($theme as $theme_item): ?>
    			<a class="nav-element" href="<?php echo base_url('topic_mission/index/')?>"<?php echo $theme_item['tid']?>><?php echo $theme_item['name']?></a>
 
-			<?php endfor; ?>
+			<?php endforeach; ?>
 			</div>
 			<div class="nav-row">
 
 			<?php foreach ($theme as $theme_item): ?>
    			<a class="nav-element" href="<?php echo base_url('topic_mission/index/')?>"<?php echo $theme_item['tid']?>><?php echo $theme_item['name']?></a>
 
-			<?php endfor; ?>
+			<?php endforeach; ?>
 			</div>
 			<div class="nav-row">
 
 			<?php foreach ($theme as $theme_item): ?>
    			<a class="nav-element" href="<?php echo base_url('topic_mission/index/')?>"<?php echo $theme_item['tid']?>><?php echo $theme_item['name']?></a>
 
-			<?php endfor; ?>
+			<?php endforeach; ?>
 			</div>
 		</div>
 		<div class="seq"></div>
@@ -166,21 +142,45 @@
 			<?php foreach ($theme as $theme_item): ?>
    			<a class="nav-element" href="<?php echo base_url('topic_mission/index/')?>"<?php echo $theme_item['tid']?>><?php echo $theme_item['name']?></a>
 
-			<?php endfor; ?>
+			<?php endforeach; ?>
 			</div>
 			<div class="nav-row">
 
 			<?php foreach ($theme as $theme_item): ?>
    			<a class="nav-element" href="<?php echo base_url('topic_mission/index/')?>"<?php echo $theme_item['tid']?>><?php echo $theme_item['name']?></a>
 
-			<?php endfor; ?>
+			<?php endforeach; ?>
 			</div>
 			<div class="nav-row">
 
 			<?php foreach ($theme as $theme_item): ?>
    			<a class="nav-element" href="<?php echo base_url('topic_mission/index/')?>"<?php echo $theme_item['tid']?>><?php echo $theme_item['name']?></a>
 
-			<?php endfor; ?>
+			<?php endforeach; ?>
+			</div>
+		</div>
+		<div class="seq"></div>
+		<div class="nav-column">
+			<div class="nav-row">
+
+			<?php foreach ($theme as $theme_item): ?>
+   			<a class="nav-element" href="<?php echo base_url('topic_mission/index/')?>"<?php echo $theme_item['tid']?>><?php echo $theme_item['name']?></a>
+
+			<?php endforeach; ?>
+			</div>
+			<div class="nav-row">
+
+			<?php foreach ($theme as $theme_item): ?>
+   			<a class="nav-element" href="<?php echo base_url('topic_mission/index/')?>"<?php echo $theme_item['tid']?>><?php echo $theme_item['name']?></a>
+
+			<?php endforeach; ?>
+			</div>
+			<div class="nav-row">
+
+			<?php foreach ($theme as $theme_item): ?>
+   			<a class="nav-element" href="<?php echo base_url('topic_mission/index/')?>"<?php echo $theme_item['tid']?>><?php echo $theme_item['name']?></a>
+
+			<?php endforeach; ?>
 			</div>
 		</div>
 		<div style="padding-right: 22px; text-align: right">
