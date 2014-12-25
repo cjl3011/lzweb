@@ -23,27 +23,50 @@
 			<?php if(isset($this->session->userdata['uid'])):?>
 				<a href="<?php echo base_url('user_information')?>" class="login-btn">欢迎您，<?php echo $this->session->userdata['nickname'];?></a>
 			<?php else:?>
+<<<<<<< HEAD
+			<a href="<?php echo base_url('login')?>" class="login-btn">登录/注册</a>
+=======
 				<a href="http://localhost/lzweb/index.php/login" class="login-btn">登录/注册</a>
+>>>>>>> 3586f381bb66ac68570e1f890a7aec7b10d40658
 			<?php endif;?>
 		</div>
 	</div>
 	<div class="nav">
 		<div class="nav-column">
 			<div class="nav-row">
+<<<<<<< HEAD
 			<?php for($i = 0 ; $i < 3 ; $i ++): ?>
    			<a class="nav-element bink" href="http://localhost/lzweb/index.php/mission_list/index/<?php echo $theme[$i]['tid']?>"><?php echo $theme[$i]['name']?></a>
+=======
+			<?php foreach ($theme as $theme_item): ?>
+<<<<<<< HEAD
+   			<a class="nav-element_bink" href="<?php echo base_url('topic_mission/index/')?>"<?php echo $theme_item['tid']?>><?php echo $theme_item['name']?></a>
+=======
+   			<a class="nav-element bink" href="http://localhost/lzweb/index.php/topic_mission/index/<?php echo $theme_item['tid']?>"><?php echo $theme_item['name']?></a>
+>>>>>>> 3586f381bb66ac68570e1f890a7aec7b10d40658
+>>>>>>> f3d708dd6f7f164ba3e2af42e4fe67416f29f1d7
 
 			<?php endfor ?>
 			</div>
 			<div class="nav-row">
+<<<<<<< HEAD
 			<?php for($i = 0 ; $i < 3 ; $i ++): ?>
    			<a class="nav-element" href="http://localhost/lzweb/index.php/mission_list/index/<?php echo $theme[$i]['tid']?>"><?php echo $theme[$i]['name']?></a>
+=======
+			<?php foreach ($theme as $theme_item): ?>
+   			<a class="nav-element" href="<?php echo base_url('topic_mission/index/')?>"<?php echo $theme_item['tid']?>><?php echo $theme_item['name']?></a>
+>>>>>>> f3d708dd6f7f164ba3e2af42e4fe67416f29f1d7
 
 			<?php endfor ?>
 			</div>
 			<div class="nav-row">
+<<<<<<< HEAD
 			<?php for($i = 0 ; $i < 3 ; $i ++): ?>
    			<a class="nav-element" href="http://localhost/lzweb/index.php/mission_list/index/<?php echo $theme[$i]['tid']?>"><?php echo $theme[$i]['name']?></a>
+=======
+			<?php foreach ($theme as $theme_item): ?>
+   			<a class="nav-element" href="<?php echo base_url('topic_mission/index/')?>"<?php echo $theme_item['tid']?>><?php echo $theme_item['name']?></a>
+>>>>>>> f3d708dd6f7f164ba3e2af42e4fe67416f29f1d7
 
 			<?php endfor ?>
 			</div>
@@ -51,20 +74,35 @@
 		<div class="seq"></div>
 		<div class="nav-column">
 			<div class="nav-row">
+<<<<<<< HEAD
 			<?php for($i = 0 ; $i < 3 ; $i ++): ?>
    			<a class="nav-element" href="http://localhost/lzweb/index.php/mission_list/index/<?php echo $theme[$i]['tid']?>"><?php echo $theme[$i]['name']?></a>
+=======
+			<?php foreach ($theme as $theme_item): ?>
+   			<a class="nav-element" href="<?php echo base_url('topic_mission/index/')?>"<?php echo $theme_item['tid']?>><?php echo $theme_item['name']?></a>
+>>>>>>> f3d708dd6f7f164ba3e2af42e4fe67416f29f1d7
 
 			<?php endfor ?>
 			</div>
 			<div class="nav-row">
+<<<<<<< HEAD
 			<?php for($i = 0 ; $i < 3 ; $i ++): ?>
    			<a class="nav-element" href="http://localhost/lzweb/index.php/mission_list/index/<?php echo $theme[$i]['tid']?>"><?php echo $theme[$i]['name']?></a>
+=======
+			<?php foreach ($theme as $theme_item): ?>
+   			<a class="nav-element" href="<?php echo base_url('topic_mission/index/')?>"<?php echo $theme_item['tid']?>><?php echo $theme_item['name']?></a>
+>>>>>>> f3d708dd6f7f164ba3e2af42e4fe67416f29f1d7
 
 			<?php endfor ?>
 			</div>
 			<div class="nav-row">
+<<<<<<< HEAD
 			<?php for($i = 0 ; $i < 3 ; $i ++): ?>
    			<a class="nav-element" href="http://localhost/lzweb/index.php/mission_list/index/<?php echo $theme[$i]['tid']?>"><?php echo $theme[$i]['name']?></a>
+=======
+			<?php foreach ($theme as $theme_item): ?>
+   			<a class="nav-element" href="<?php echo base_url('topic_mission/index/')?>"<?php echo $theme_item['tid']?>><?php echo $theme_item['name']?></a>
+>>>>>>> f3d708dd6f7f164ba3e2af42e4fe67416f29f1d7
 
 			<?php endfor ?>
 			</div>
@@ -72,20 +110,35 @@
 		<div class="seq"></div>
 		<div class="nav-column">
 			<div class="nav-row">
+<<<<<<< HEAD
 			<?php for($i = 0 ; $i < 3 ; $i ++): ?>
    			<a class="nav-element" href="http://localhost/lzweb/index.php/mission_list/index/<?php echo $theme[$i]['tid']?>"><?php echo $theme[$i]['name']?></a>
+=======
+			<?php foreach ($theme as $theme_item): ?>
+   			<a class="nav-element" href="<?php echo base_url('topic_mission/index/')?>"<?php echo $theme_item['tid']?>><?php echo $theme_item['name']?></a>
+>>>>>>> f3d708dd6f7f164ba3e2af42e4fe67416f29f1d7
 
 			<?php endfor ?>
 			</div>
 			<div class="nav-row">
+<<<<<<< HEAD
 			<?php for($i = 0 ; $i < 3 ; $i ++): ?>
    			<a class="nav-element" href="http://localhost/lzweb/index.php/mission_list/index/<?php echo $theme[$i]['tid']?>"><?php echo $theme[$i]['name']?></a>
+=======
+			<?php foreach ($theme as $theme_item): ?>
+   			<a class="nav-element" href="<?php echo base_url('topic_mission/index/')?>"<?php echo $theme_item['tid']?>><?php echo $theme_item['name']?></a>
+>>>>>>> f3d708dd6f7f164ba3e2af42e4fe67416f29f1d7
 
 			<?php endfor ?>
 			</div>
 			<div class="nav-row">
+<<<<<<< HEAD
 			<?php for($i = 0 ; $i < 3 ; $i ++): ?>
    			<a class="nav-element" href="http://localhost/lzweb/index.php/mission_list/index/<?php echo $theme[$i]['tid']?>"><?php echo $theme[$i]['name']?></a>
+=======
+			<?php foreach ($theme as $theme_item): ?>
+   			<a class="nav-element" href="<?php echo base_url('topic_mission/index/')?>"<?php echo $theme_item['tid']?>><?php echo $theme_item['name']?></a>
+>>>>>>> f3d708dd6f7f164ba3e2af42e4fe67416f29f1d7
 
 			<?php endfor ?>
 			</div>
@@ -93,41 +146,35 @@
 		<div class="seq"></div>		
 		<div class="nav-column">
 			<div class="nav-row">
+<<<<<<< HEAD
 			<?php for($i = 0 ; $i < 3 ; $i ++): ?>
    			<a class="nav-element" href="http://localhost/lzweb/index.php/mission_list/index/<?php echo $theme[$i]['tid']?>"><?php echo $theme[$i]['name']?></a>
+=======
+			<?php foreach ($theme as $theme_item): ?>
+   			<a class="nav-element" href="<?php echo base_url('topic_mission/index/')?>"<?php echo $theme_item['tid']?>><?php echo $theme_item['name']?></a>
+>>>>>>> f3d708dd6f7f164ba3e2af42e4fe67416f29f1d7
 
 			<?php endfor ?>
 			</div>
 			<div class="nav-row">
+<<<<<<< HEAD
 			<?php for($i = 0 ; $i < 3 ; $i ++): ?>
    			<a class="nav-element" href="http://localhost/lzweb/index.php/mission_list/index/<?php echo $theme[$i]['tid']?>"><?php echo $theme[$i]['name']?></a>
+=======
+			<?php foreach ($theme as $theme_item): ?>
+   			<a class="nav-element" href="<?php echo base_url('topic_mission/index/')?>"<?php echo $theme_item['tid']?>><?php echo $theme_item['name']?></a>
+>>>>>>> f3d708dd6f7f164ba3e2af42e4fe67416f29f1d7
 
 			<?php endfor ?>
 			</div>
 			<div class="nav-row">
+<<<<<<< HEAD
 			<?php for($i = 0 ; $i < 3 ; $i ++): ?>
    			<a class="nav-element" href="http://localhost/lzweb/index.php/mission_list/index/<?php echo $theme[$i]['tid']?>"><?php echo $theme[$i]['name']?></a>
-
-			<?php endfor ?>
-			</div>
-		</div>
-		<div class="seq"></div>
-		<div class="nav-column">
-			<div class="nav-row">
-			<?php for($i = 0 ; $i < 3 ; $i ++): ?>
-   			<a class="nav-element" href="http://localhost/lzweb/index.php/mission_list/index/<?php echo $theme[$i]['tid']?>"><?php echo $theme[$i]['name']?></a>
-
-			<?php endfor ?>
-			</div>
-			<div class="nav-row">
-			<?php for($i = 0 ; $i < 3 ; $i ++): ?>
-   			<a class="nav-element" href="http://localhost/lzweb/index.php/mission_list/index/<?php echo $theme[$i]['tid']?>"><?php echo $theme[$i]['name']?></a>
-
-			<?php endfor ?>
-			</div>
-			<div class="nav-row">
-			<?php for($i = 0 ; $i < 3 ; $i ++): ?>
-   			<a class="nav-element" href="http://localhost/lzweb/index.php/mission_list/index/<?php echo $theme[$i]['tid']?>"><?php echo $theme[$i]['name']?></a>
+=======
+			<?php foreach ($theme as $theme_item): ?>
+   			<a class="nav-element" href="<?php echo base_url('topic_mission/index/')?>"<?php echo $theme_item['tid']?>><?php echo $theme_item['name']?></a>
+>>>>>>> f3d708dd6f7f164ba3e2af42e4fe67416f29f1d7
 
 			<?php endfor ?>
 			</div>
@@ -135,20 +182,35 @@
 		<div class="seq"></div>
 		<div class="nav-column">
 			<div class="nav-row">
+<<<<<<< HEAD
 			<?php for($i = 0 ; $i < 3 ; $i ++): ?>
    			<a class="nav-element" href="http://localhost/lzweb/index.php/mission_list/index/<?php echo $theme[$i]['tid']?>"><?php echo $theme[$i]['name']?></a>
+=======
+			<?php foreach ($theme as $theme_item): ?>
+   			<a class="nav-element" href="<?php echo base_url('topic_mission/index/')?>"<?php echo $theme_item['tid']?>><?php echo $theme_item['name']?></a>
+>>>>>>> f3d708dd6f7f164ba3e2af42e4fe67416f29f1d7
 
 			<?php endfor ?>
 			</div>
 			<div class="nav-row">
+<<<<<<< HEAD
 			<?php for($i = 0 ; $i < 3 ; $i ++): ?>
    			<a class="nav-element" href="http://localhost/lzweb/index.php/mission_list/index/<?php echo $theme[$i]['tid']?>"><?php echo $theme[$i]['name']?></a>
+=======
+			<?php foreach ($theme as $theme_item): ?>
+   			<a class="nav-element" href="<?php echo base_url('topic_mission/index/')?>"<?php echo $theme_item['tid']?>><?php echo $theme_item['name']?></a>
+>>>>>>> f3d708dd6f7f164ba3e2af42e4fe67416f29f1d7
 
 			<?php endfor ?>
 			</div>
 			<div class="nav-row">
+<<<<<<< HEAD
 			<?php for($i = 0 ; $i < 3 ; $i ++): ?>
    			<a class="nav-element" href="http://localhost/lzweb/index.php/mission_list/index/<?php echo $theme[$i]['tid']?>"><?php echo $theme[$i]['name']?></a>
+=======
+			<?php foreach ($theme as $theme_item): ?>
+   			<a class="nav-element" href="<?php echo base_url('topic_mission/index/')?>"<?php echo $theme_item['tid']?>><?php echo $theme_item['name']?></a>
+>>>>>>> f3d708dd6f7f164ba3e2af42e4fe67416f29f1d7
 
 			<?php endfor ?>
 			</div>
@@ -156,20 +218,71 @@
 		<div class="seq"></div>
 		<div class="nav-column">
 			<div class="nav-row">
+<<<<<<< HEAD
 			<?php for($i = 0 ; $i < 3 ; $i ++): ?>
    			<a class="nav-element" href="http://localhost/lzweb/index.php/mission_list/index/<?php echo $theme[$i]['tid']?>"><?php echo $theme[$i]['name']?></a>
+=======
+			<?php foreach ($theme as $theme_item): ?>
+   			<a class="nav-element" href="<?php echo base_url('topic_mission/index/')?>"<?php echo $theme_item['tid']?>><?php echo $theme_item['name']?></a>
+>>>>>>> f3d708dd6f7f164ba3e2af42e4fe67416f29f1d7
 
 			<?php endfor ?>
 			</div>
 			<div class="nav-row">
+<<<<<<< HEAD
 			<?php for($i = 0 ; $i < 3 ; $i ++): ?>
    			<a class="nav-element" href="http://localhost/lzweb/index.php/mission_list/index/<?php echo $theme[$i]['tid']?>"><?php echo $theme[$i]['name']?></a>
+=======
+			<?php foreach ($theme as $theme_item): ?>
+   			<a class="nav-element" href="<?php echo base_url('topic_mission/index/')?>"<?php echo $theme_item['tid']?>><?php echo $theme_item['name']?></a>
+>>>>>>> f3d708dd6f7f164ba3e2af42e4fe67416f29f1d7
 
 			<?php endfor ?>
 			</div>
 			<div class="nav-row">
+<<<<<<< HEAD
 			<?php for($i = 0 ; $i < 3 ; $i ++): ?>
    			<a class="nav-element" href="http://localhost/lzweb/index.php/mission_list/index/<?php echo $theme[$i]['tid']?>"><?php echo $theme[$i]['name']?></a>
+=======
+			<?php foreach ($theme as $theme_item): ?>
+   			<a class="nav-element" href="<?php echo base_url('topic_mission/index/')?>"<?php echo $theme_item['tid']?>><?php echo $theme_item['name']?></a>
+>>>>>>> f3d708dd6f7f164ba3e2af42e4fe67416f29f1d7
+
+			<?php endfor ?>
+			</div>
+		</div>
+		<div class="seq"></div>
+		<div class="nav-column">
+			<div class="nav-row">
+<<<<<<< HEAD
+			<?php for($i = 0 ; $i < 3 ; $i ++): ?>
+   			<a class="nav-element" href="http://localhost/lzweb/index.php/mission_list/index/<?php echo $theme[$i]['tid']?>"><?php echo $theme[$i]['name']?></a>
+=======
+			<?php foreach ($theme as $theme_item): ?>
+   			<a class="nav-element" href="<?php echo base_url('topic_mission/index/')?>"<?php echo $theme_item['tid']?>><?php echo $theme_item['name']?></a>
+>>>>>>> f3d708dd6f7f164ba3e2af42e4fe67416f29f1d7
+
+			<?php endfor ?>
+			</div>
+			<div class="nav-row">
+<<<<<<< HEAD
+			<?php for($i = 0 ; $i < 3 ; $i ++): ?>
+   			<a class="nav-element" href="http://localhost/lzweb/index.php/mission_list/index/<?php echo $theme[$i]['tid']?>"><?php echo $theme[$i]['name']?></a>
+=======
+			<?php foreach ($theme as $theme_item): ?>
+   			<a class="nav-element" href="<?php echo base_url('topic_mission/index/')?>"<?php echo $theme_item['tid']?>><?php echo $theme_item['name']?></a>
+>>>>>>> f3d708dd6f7f164ba3e2af42e4fe67416f29f1d7
+
+			<?php endfor ?>
+			</div>
+			<div class="nav-row">
+<<<<<<< HEAD
+			<?php for($i = 0 ; $i < 3 ; $i ++): ?>
+   			<a class="nav-element" href="http://localhost/lzweb/index.php/mission_list/index/<?php echo $theme[$i]['tid']?>"><?php echo $theme[$i]['name']?></a>
+=======
+			<?php foreach ($theme as $theme_item): ?>
+   			<a class="nav-element" href="<?php echo base_url('topic_mission/index/')?>"<?php echo $theme_item['tid']?>><?php echo $theme_item['name']?></a>
+>>>>>>> f3d708dd6f7f164ba3e2af42e4fe67416f29f1d7
 
 			<?php endfor ?>
 			</div>
