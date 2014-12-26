@@ -13,7 +13,6 @@ class Login extends CI_Controller {
 		$data['info'] = '';
 		  
 		$this->load->view('login', $data);
-		$this->load->view('templates/footer');
 	}
 	
 	public function get_result(){

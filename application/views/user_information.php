@@ -54,11 +54,11 @@
         
 		<div class="operation-body" id="my-personal">
             <div class="desc-list">
-                <span class="float-left">用户</span>
+                <span class="float-left">用户:</span>
                 <span class="float-left"><?php echo $login_user['username']?></span>
             </div>
             <div class="desc-list">
-                <span class="float-left">昵称<?php echo $login_user['nickname']?></span>
+                <span class="float-left">昵称:<?php echo $login_user['nickname']?></span>
             </div>
             <div class="desc-list" id="modify-nick-area">
                 <span class="float-left">修改昵称为</span>
@@ -104,7 +104,7 @@
             <?php if(isset($user_reply)):?>
 			<?php foreach ($user_reply as $user):?>
 			<div class="desc-list">
-                <span class="float-left">回复名称</span>
+                <span class="float-left">回复名称:</span>
                 <?php echo $user['content']?>
 				<a href="http://localhost/lzweb/index.php/user_information/delete_reply/<?php echo $user['mid']?>">删除回复</a>
                 <span class="float-right">2014-12-24 21:47:09</span>

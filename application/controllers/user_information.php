@@ -5,8 +5,7 @@ class User_information extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->helper('url');
-		$this->load->model('login_model');
-		$this->load->model('user_information_model');
+		$this->load->model(array('login_model', 'theme_model', 'user_information_model'));
 		$this->load->library('session');
 	}
 	public function index(){
@@ -21,8 +20,8 @@ class User_information extends CI_Controller {
 			'title' => '个人中心',
 			'login_user' => $this->login_model->get_by_uid($uid),
 			'user_mission' =>  $this->user_information_model->get_user_mission($uid),
-			'user_reply' => $this->user_information_model->get_user_reply($uid)
-			
+			'user_reply' => $this->user_information_model->get_user_reply($uid),
+			'theme' =>  $this->theme_model->get()
 			);
 		//$data['login_user'] = $this->login_model->get_by_uid($data['uid']);
 	
