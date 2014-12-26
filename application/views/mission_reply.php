@@ -28,7 +28,6 @@
 		});
     });
 </script>
-<div id="banner"></div>
 	<div class="main">
 		<div class="mission-content">
 			<h2>名称：<?php echo $mission['title']?></h2>
@@ -45,10 +44,10 @@
 				<span href="javascript:void(0)">回复(<?php echo count($reply);?>)</span>
 				<span id="grade">
 					<label>评分:</label>
-					<?php for($i=0;$i<ceil($mission['grade']);$i++):?>
+					<?php for($i=0;$i<floor($mission['grade']);$i++):?>
 						<a href="javascript:void(0)" class="star-active"><i class="fi-star size24"></i></a>
 					<?php endfor;?>
-					<?php for($i=0;$i<5-ceil($mission['grade']);$i++):?>
+					<?php for($i=0;$i<5-floor($mission['grade']);$i++):?>
 						<a href="javascript:void(0)" class="star-normal"><i class="fi-star size24"></i></a>
 					<?php endfor;?>
 					

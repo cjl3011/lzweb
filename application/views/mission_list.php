@@ -35,7 +35,7 @@
 					<div class="handler-area">
 						<a href="javascript:void(0)" id="pre-btn" class="page-handler-element">上一页</a>
 						<a class="page-handler-element">
-							<span id="current">1</span>/<span id="total">10</span>
+							<span id="current">0</span>/<span id="total">0</span>
 						</a>
 						<a href="javascript:void(0)" id="next-btn" class="page-handler-element">下一页</a>
 					</div>

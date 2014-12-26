@@ -12,7 +12,7 @@ class Home extends CI_Controller {
 		$this->load->helper('url');
 	}
 
-	public function array_sort($arr,$keys,$type='asc')
+	public function array_sort($arr,$keys,$type='arsc')
 	{ 
 		$keysvalue = $new_array = array();
 		foreach ($arr as $k=>$v){

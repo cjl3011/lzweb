@@ -43,7 +43,6 @@
     </script>
 </head>
 <body>
-    <div id="banner"></div>
     <div class="main">
         <div></div>
         <h2 class="operation-banner">
