@@ -12,8 +12,12 @@
 	<title><?php echo $title;?></title>
     <link type="text/css" href="http://localhost/lzweb/static/css/type.css" rel="stylesheet">
 	<script type="text/javascript" src="http://localhost/lzweb/static/js/jquery.js"></script>
+<<<<<<< HEAD
+	
+=======
 	<script type="text/javascript" src="http://localhost/lzweb/static/js/shine.js" rel="stylesheet"> </script>
     <script type="text/javascript" src="http://localhost/lzweb/static/js/tab.js" rel="stylesheet"></script>
+>>>>>>> ce719db66a0c04ebfddf589c4c002c994ccde925
 </head>
 <body>
 	<div class="header">
@@ -22,15 +26,31 @@
 			<?php if(isset($this->session->userdata['uid'])):?>
 				<a href="<?php echo base_url('user_information')?>" class="login-btn">欢迎您，<?php echo $this->session->userdata['nickname'];?></a>
 			<?php else:?>
+<<<<<<< HEAD
+
 			<a href="<?php echo base_url('login')?>" class="login-btn">登录/注册</a>
+
+
+=======
+			<a href="<?php echo base_url('login')?>" class="login-btn">登录/注册</a>
+>>>>>>> ce719db66a0c04ebfddf589c4c002c994ccde925
 			<?php endif;?>
 		</div>
 	</div>
 	<div class="nav">
 		<div class="nav-column">
 			<div class="nav-row">
+<<<<<<< HEAD
+			<?php foreach ($theme as $theme_item): ?>
+
+   			<a class="nav-element_bink" href="<?php echo base_url('topic_mission/index/')?>"<?php echo $theme_item['tid']?>><?php echo $theme_item['name']?></a>
+
+   			<a class="nav-element bink" href="http://localhost/lzweb/index.php/topic_mission/index/<?php echo $theme_item['tid']?>"><?php echo $theme_item['name']?></a>
+
+=======
 			<?php for($i = 0 ; $i < 3 ; $i ++): ?>
    			<a class="nav-element bink" href="<?php echo base_url('mission_list/index/' . $theme[$i]['tid'])?>"><?php echo $theme[$i]['name']?></a>
+>>>>>>> ce719db66a0c04ebfddf589c4c002c994ccde925
 
 			<?php endfor; ?>
 			</div>
