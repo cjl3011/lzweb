@@ -6,7 +6,6 @@
 		Shine.init();
     });
 </script>
-<div id="banner"></div>
 <div class="main">
 	<h2 class="mission-banner">申请主题</h2>
 	<div class="mission-content">

@@ -3,6 +3,7 @@ var Page = {
 	init: function(){
 		$("#pre-btn").bind("click", Page.pre_page);
 		$("#next-btn").bind("click", Page.next_page);
+		Page.tid = $("#tid").val();
 		Page.next_page();
 	},
 	pre_page: function(){
@@ -13,8 +14,8 @@ var Page = {
 		var offset = (current_page-1)*2;
 		$.ajax({
 			"type":"POST",
-			"url": "mission_list/get_page",
-			"data": "offset="+offset+"&num=2",
+			"url": "/lzweb/index.php/mission_list/get_page",
+			"data": "offset="+offset+"&num=2"+"&tid="+Page.tid,
 			"dataType": "json",
 			"success": function(data){
 				if(data.missions.length > 0){
@@ -30,8 +31,8 @@ var Page = {
 		var offset = (current_page-1)*2;
 		$.ajax({
 			"type":"POST",
-			"url": "mission_list/get_page",
-			"data": "offset="+offset+"&num=2",
+			"url": "/lzweb/index.php/mission_list/get_page",
+			"data": "offset="+offset+"&num=2"+"&tid="+Page.tid,
 			"dataType": "json",
 			"success": function(data){
 				if(data.missions.length > 0){

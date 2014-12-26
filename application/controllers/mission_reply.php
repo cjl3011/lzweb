@@ -59,6 +59,17 @@ class Mission_reply extends CI_Controller {
 			}
 		}
 	}
+	
+	public function add_grade(){
+		$mid = $this->input->post('mid');
+		$point = $this->input->post('point');
+		if($this->mission_model->set_grade($mid, $point) === TRUE){
+			echo json_encode(array('result'=>TRUE));
+		}else{
+			echo json_encode(array('result'=>FALSE));
+		}
+		
+	}
 }
 /* End of file mission_list.php */
 /* Location: ./application/controllers/mission_list.php */

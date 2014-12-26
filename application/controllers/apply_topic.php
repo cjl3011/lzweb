@@ -7,6 +7,7 @@ class Apply_topic extends CI_Controller {
 		parent::__construct();
 		$this->load->model('apply_topic_model');
 		$this->load->model('theme_model');
+		$this->load->helper('url');
 	}
 	public function index(){
 		if ( ! file_exists(APPPATH.'/views/' . 'pub_mission' . '.php')){

@@ -151,3 +151,28 @@
 	color: #00a1e9;
 	margin-right: 50px;
 }
+#grade{
+	float: right;
+}
+#grade a{
+	float: left;
+	display: block;
+	margin-left: 5px;
+}
+.star-normal{
+	color: #e0e0e0;	
+}
+.star-active{
+	color: #00a1e9;
+}
+#grade label{
+	font-weight: normal;
+	float:left;
+}
+i{
+	display: block;
+	margin: 2px 0;
+}
+.size24{
+	font-size: 24px;
+}

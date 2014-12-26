@@ -29,6 +29,7 @@
 			</div>
 			
 			<div class="tab-content">
+				<input type="hidden" id="tid" value="<?php echo $tid;?>"/>
   				<div role="tabpanel" class="tab-pane active" id="home">
 					<div id="mission-list"></div>
 					<div class="handler-area">

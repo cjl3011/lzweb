@@ -5,11 +5,18 @@ class Mission_model extends CI_Model {
 		$this->load->database();
 	}
 	
-	public function get($offset=0, $num=0){
+	public function get($offset=0, $num=0, $tid=0){
 		if($num){
-			$this->db->order_by("pubtime", "desc");
-			$query = $this->db->get('mission', $num, $offset);
-			return $query->result_array();
+			if($tid){
+				$this->db->where('tid', $tid);
+				$this->db->order_by("pubtime", "desc");
+				$query = $this->db->get('mission', $num, $offset);
+				return $query->result_array();
+			} else {
+				$this->db->order_by("pubtime", "desc");
+				$query = $this->db->get('mission', $num, $offset);
+				return $query->result_array();
+			}
 		} else {
 			$query = $this->db->get('mission');
 			return $query->result_array();
@@ -21,9 +28,15 @@ class Mission_model extends CI_Model {
 		return $query->result_array();
 	}
 	
-	public function count_result(){
-		$query = $this->db->count_all_results('mission');
-		return $query;
+	public function count_result($tid=0){
+		if($tid){
+			$this->db->where('tid', $tid);
+			$query = $this->db->count_all_results('mission');
+			return $query;
+		}else {
+			$query = $this->db->count_all_results('mission');
+			return $query;
+		}
 	}
 
 	public function get_by_mid($mid = 0){
@@ -61,10 +74,14 @@ class Mission_model extends CI_Model {
 		return $this->db->update('mission', $data, array('mid' => $mid));
 	}
 	
-	public function set_grade($mid) {
-		$grade = $this->get_by_mid($mid)['grade'];
+	public function set_grade($mid, $point) {
+		$info = $this->get_by_mid($mid);
+		$amount = $info['amount'];
+		$grade = $info['grade'];
+		$result = ($grade * $amount + $point) / ($amount + 1);
 		$data = array(
-			'grade' => $grade,
+			'grade' => $result,
+			'amount' => $amount + 1
 		);
 		return $this->db->update('mission', $data, array('mid' => $mid));
 	}

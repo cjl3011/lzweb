@@ -22,6 +22,7 @@ class Mission_list extends CI_Controller {
 		}
 		$data['title'] = '任务列表';
 		$data['mission'] = $missions;
+		$data['tid'] = $tid;
 
 		$data['payList'] = $this->array_sort($this->mission_model->get_by_tid($tid),'payment');
 		$data['pubList'] = $this->array_sort($this->mission_model->get_by_tid($tid),'pubtime');
@@ -54,13 +55,14 @@ class Mission_list extends CI_Controller {
 	public function get_page(){
 		$offset = $this->input->post('offset');
 		$num = $this->input->post('num');
-		$amount = $this->mission_model->count_result();
+		$tid = $this->input->post('tid');
+		$amount = $this->mission_model->count_result($tid);
 		$page = ceil($amount / $num);
 		
 		if($offset > $amount){
 			echo json_encode(array('result' => NULL));
 		} else {
-			$missions = $this->mission_model->get($offset, $num);
+			$missions = $this->mission_model->get($offset, $num, $tid);
 			foreach($missions as $key => $mission){
 				$user = $this->login_model->get_by_uid($mission['uid']);
 				$missions[$key]['nickname'] = $user['nickname'];
